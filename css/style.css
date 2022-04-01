@@ -1,0 +1,155 @@
+/*This style page is for home */
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    background-color: #aca7a7;
+    box-sizing: content-box;
+    height: 0.5px;
+    overflow: visible;
+    width: 8%;
+    margin: 0 auto;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    color: inherit;
+    border-top: 1px solid rgba(0,0,0,.1);
+    opacity: unset!important;
+}
+/************************ Header ************************/
+header{
+    height: 1000px;
+}
+.container-fluid {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    height: 500px;
+}
+.header-video{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.6;
+}
+.header-container{
+    position: absolute;
+    top:0px;
+    left: 60px;
+}
+/***** Navbar ****/
+.navbar .navbar-brand{
+    font-size: 40px;
+    color: white;
+}
+.navbar .container-fluid{
+    height: 100px;
+}
+.navbar .navbar-collapse ul{
+    margin: 10px auto;
+    color: white;
+    font-size: 25px;
+}
+.navbar .nav-link{
+    color: white;
+    margin-right: 30px;
+}
+.navbar .btn{
+    padding: 10px 30px;
+    background-color: #010ea5;
+    color:white
+}
+.main-concept{
+    color: white;
+    margin-top: 170px;
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 1.5px;
+}
+
+/************************ About Us ************************/
+.about-us hr{
+    width: 12%;
+    margin: 0 40px;
+}
+.about-us .about-us-text{
+    padding-top: 60px;
+}
+.about-us img{
+    float: right;
+}
+/*********************** Why Us *************************/
+.why-us{
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+
+.why-us-container{
+    margin-left: 90px;
+    margin-top: 90px;
+}
+.why-us .card{
+    margin-right: 57px;
+    text-align: center;
+    height: 300px;
+}
+.why-us .first-card,
+.why-us .third-card{
+    background-color: #db8ac2;
+}
+.why-us .second-card {
+    position: relative;
+    top: 50px;
+    background-color: #040477;
+}
+/*********************** reg-form ***********************/
+.reg-form{
+    margin-bottom: 200px;
+}
+.form-container{
+    margin-top: 70px;
+}
+.form-structure{
+    border: 1px solid gray;
+    box-shadow: 10px 10px 15px #969393;
+    padding: 30px;
+}
+.form-description{
+    margin-top: 250px;
+    padding-left: 70px;
+}
+/************************* Footer ***********************/
+footer{
+    background-color: #040477;
+    color: white;
+}
+footer .container-fluid{
+    height: 100%;
+}
+.footer-container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+footer .contact-us{
+    border-right: 1px solid white;
+    padding: 20px;
+}
+.contact-us .icons span{
+    display: block;
+    margin: 15px;
+    cursor: pointer;
+}
+.footer-text{
+    padding-left: 0;
+}
+.footer-text .visit-us{
+    border-bottom: 1px solid;
+    padding: 70px 20px;
+    height: 225px;
+}
+.footer-text .all-rights-reserved{
+    padding: 20px 20px 0 20px;
+}

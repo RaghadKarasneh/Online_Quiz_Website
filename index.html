@@ -4,9 +4,237 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Fonawesome-->
+    <link rel="stylesheet" href="./bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>OPQ</title>
 </head>
 <body>
+    <!--Start Header which contains: navbar and the main website concept-->
+    <header>
+        <div class="container-fluid">
+            <!--**Background video**-->
+            <video class="header-video" playsinlin autoplay muted loop src="./media/Background-video.mp4"></video>
+            <!--**Header contents**-->
+            <div class=" header-container">
+                <!--**Start navbar**-->
+                <nav class="navbar navbar-expand-lg bg-transparent">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Navbar</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Why Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                          </li>
+                        </ul>
+                        <form class="d-flex">
+                          <button class="btn" type="submit">Sign Up</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+                <!--**End navbar**-->
+
+                <!--**Start main concept**-->
+                <div class="row main-concept">
+                    <div class="col-lg-6 col-md-4 col-sm-12">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ullam blanditiis molestiae. Perferendis debitis porro dolore delectus at deleniti facere ipsam! Iure est rem delectus, sequi a in ipsum dolores.</p>
+                    </div>
+                </div>
+                <!--**End main concept**-->
+
+            </div>
+        </div>
+    </header>
+    <!--End Header-->
+    <!--****************************************************************************************************************************************-->
+
+    <div class="clearfix"></div> <!--to delet the float effect-> clear:both-->
+
+    <!--****************************************************************************************************************************************-->
+
+    <!--Start Websit body which contains: about us section, why us section, and registraion form -->
     
+    <main>
+       <div class="container">
+            <!--**Start about-us**-->
+        <article>
+            <div class="row about-us">
+                <div class="col-lg-4 about-us-text">
+                    <h2>About us</h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi unde eius debitis est iure consectetur eaque, rem numquam quas qui ex doloremque maxime aut, voluptatum nisi officiis reiciendis voluptate! Explicabo.</p>
+                </div>
+                <div class="col-lg-8 about-us-img">
+                    <img src="./media/about us.jfif" alt="About-us" height="100%" width="60%">
+                </div>
+            </div>
+        </article>
+        <!--**End about-us**-->
+
+        <!--************************************************************-->
+
+        <div class="clearfix"></div>
+
+        <!--************************************************************-->
+
+        <!--**Start Why-us-->
+        <article>
+            <div class="why-us">
+                <h1 class="text-center">Why Us?</h1>
+                <hr>
+                <div class="row why-us-container">
+                    <!--**First card**-->
+                    <div class="col-lg-4 col-md-3 col-sm-12 card first-card text-white mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Primary card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <!--**Second card**-->
+                    <div class="col-lg-4 col-md-3 col-sm-12 card second-card text-white mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Primary card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <!--**Third card**-->
+                    <div class="col-lg-4 col-md-3 col-sm-12 card third-card text-white mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="card-title">Primary card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--**End why-us-->
+        <!--************************************************************-->
+
+        <div class="clearfix"></div>
+
+        <!--************************************************************-->
+
+        <!--**Start Registration form-->
+        <article>
+            <div class="reg-form">
+                <h1 class="text-center">Joun Us</h1>
+                <hr>
+                <div class="row form-container">
+    
+                    <!--** Form structure **-->
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-structure">
+                        <form>
+                            <!--**First name input-->
+                            <div class="mb-3">
+                              <label for="firstNameInput" class="form-label">First Name</label>
+                              <input type="text" class="form-control" id="firstNameInput" name="first-name">
+                            </div>
+                            <!--**Last name input-->
+                            <div class="mb-3">
+                                <label for="lastNameInput" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastNameInput" name="last-name">
+                              </div>
+                            <!--**Email input-->
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                            <!--**Passowrd input-->
+                            <div class="mb-3">
+                                <label for="Password1Input" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="Password1Input">
+                              </div>
+                            <!--**Confirm password input-->
+                            <div class="mb-3">
+                                <label for="confirmPasswordInput" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPasswordInput">
+                              </div>
+                            <!--**Position select-->
+                            <div class="mb-3">
+                                <label for="positionSelect" class="form-label">Choose Position</label>
+                                <select class="form-select" aria-label="Default select example" id="positionSelect">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">HTML</option>
+                                    <option value="2">CSS</option>
+                                    <option value="3">JavaScript</option>
+                                  </select>
+                              </div>
+                            <!--**Buttons-->
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                                <button class="btn btn-primary" id="sign-in">Sign In</button>
+                            </div>
+                          </form>
+                    </div>
+    
+                    <!--** Form description **-->
+                    <div class="col-lg-6 form-description text-center">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sequi provident in temporibus quas? Magni nisi consequatur asperiores soluta, aperiam aut enim, facere rerum facilis, totam eligendi perspiciatis minima tempora!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--**End Registration form-->
+       </div>
+    </main>
+    <!--End Websit body-->
+
+    <!--****************************************************************************************************************************************-->
+
+    <div class="clearfix"></div>
+
+    <!--****************************************************************************************************************************************-->
+    <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row footer-container">
+                <!--** Contact Us **-->
+                <div class="col-lg-4 col-md-4 col-6-12 contact-us text-center">
+                    <h2>Contact Us</h2>
+                    <div class="icons">
+                        <span class="fa fa-linkedin fa-3x"></span>
+                        <span class="fa fa-github fa-3x"></span>
+                        <span class="fa fa-envelope-open fa-3x"></span>
+                    </div>
+                </div>
+    
+                <!--** Footer Text **-->
+                <div class="col-lg-8 col-md-8 col-6-12 footer-text">
+                    <!--** Visit Us-->
+                    <div class="visit-us">
+                        <h2>Visit Us</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illum est voluptates officia hic repudiandae porro vel quaerat deleniti dolorum quasi velit aliquam sint, ex natus dicta nulla. Eaque, provident?</p>
+                    </div>
+                    <!--** All rights reerved-->
+                    <div class="all-rights-reserved">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--****************************************************************************************************************************************-->
+
+    <div class="clearfix"></div>
+
+    <!--****************************************************************************************************************************************-->
 </body>
 </html>
