@@ -51,10 +51,17 @@ hr{
     margin-top: 100px;
     margin-bottom: 150px;
 }
+.container p{
+    margin-top: 50px;
+}
 .welcome .btn{
     background-color: #fd7e6d;
     height: 50px;
     margin-top: 50px;
+}
+.welcome .btn a{
+    text-decoration: none;
+    color: black;
 }
 /************************* Footer ***********************/
 footer{

@@ -139,46 +139,58 @@
     
                     <!--** Form structure **-->
                     <div class="col-lg-6 col-md-12 col-sm-12 form-structure">
-                        <form>
+                        <form id="regs_form">
+
                             <!--**First name input-->
                             <div class="mb-3">
                               <label for="firstNameInput" class="form-label">First Name</label>
-                              <input type="text" class="form-control" id="firstNameInput" name="first-name">
+                              <input type="text" class="form-control" id="firstNameInput" name="fname" required="true">
                             </div>
                             <!--**Last name input-->
                             <div class="mb-3">
                                 <label for="lastNameInput" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastNameInput" name="last-name">
+                                <input type="text" class="form-control" id="lastNameInput" name="lname" required="true">
                               </div>
+                              <!--**Name error message-->
+                              <div class="error-msg" id="error-name"></div>
+
+
                             <!--**Email input-->
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required="true">
                               </div>
+                              <!--**Email error message-->
+                              <div class="error-msg" id="error-email"></div>
+
+
                             <!--**Passowrd input-->
                             <div class="mb-3">
                                 <label for="Password1Input" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="Password1Input">
+                                <input type="password" class="form-control" id="Password1Input" name="password" required="true">
                               </div>
                             <!--**Confirm password input-->
                             <div class="mb-3">
                                 <label for="confirmPasswordInput" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPasswordInput">
+                                <input type="password" class="form-control" id="confirmPasswordInput"  name="spassword" required="true"> 
                               </div>
+                              <!--**Email error message-->
+                              <div class="error-msg" id="error-password"></div>
+
                             <!--**Position select-->
                             <div class="mb-3">
-                                <label for="positionSelect" class="form-label">Choose Position</label>
-                                <select class="form-select" aria-label="Default select example" id="positionSelect">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">HTML</option>
-                                    <option value="2">CSS</option>
-                                    <option value="3">JavaScript</option>
+                                <select class="form-select" aria-label="Default select example" id="positionSelect" name="selectList" required="true">
+                                    <option selected>Choose Position</option>
+                                    <option value="HTML">HTML</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="JavaScript">JavaScript</option>
                                   </select>
                               </div>
                             <!--**Buttons-->
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-primary">Sign Up</button>
-                                <button class="btn btn-primary" id="sign-in">Sign In</button>
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn col-lg-3 btn-primary"><a class="nav-link" id="reg-submit-link">Sign Up</a></button>
+                                <!--<a class="nav-link" href="./welcome.html">Sign Up</a>-->
+                                <button class="btn col-lg-3 btn-primary" id="sign-in">Sign In</button>
                             </div>
                           </form>
                     </div>
@@ -237,4 +249,5 @@
 
     <!--****************************************************************************************************************************************-->
 </body>
+<script src="./js/app.js"></script>
 </html>
