@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    background-color: #aca7a7;
+    box-sizing: content-box;
+    height: 0.5px;
+    overflow: visible;
+    width: 8%;
+    margin: 0 auto;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    color: inherit;
+    border-top: 1px solid rgba(0,0,0,.1);
+    opacity: unset!important;
+}
+/************************ Header ************************/
+
+/***** Navbar ****/
+.navbar .navbar-brand{
+    font-size: 40px;
+    color: black;
+}
+.navbar .container-fluid{
+    height: 100px;
+}
+.navbar .navbar-collapse ul{
+    margin: 10px auto;
+    color: black;
+    font-size: 25px;
+}
+.navbar .nav-link{
+    color: black;
+    margin-right: 30px;
+}
+.navbar .btn{
+    padding: 10px 30px;
+    background-color: #010ea5;
+    color:white
+}
+/************************* Result ***********************/
+.container{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+.result{
+    margin-top: 150px;
+}
+.result .result-text{
+    margin-right: 130px;
+    margin-top: 70px;
+}
+.result .result-text .btn{
+    background-color: #fd7e6d;
+    height: 50px;
+    margin-top: 50px;
+}
+.result .table{
+    border: 2px solid #dee2e6;
+}
+.table th,
+.table .td{
+    border-right: 2px solid #dee2e6;
+}
+/************************* Footer ***********************/
+footer{
+    background-color: #040477;
+    color: white;
+}
+footer .container-fluid{
+    height: 100%;
+}
+.footer-container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+footer .contact-us{
+    border-right: 1px solid white;
+    padding: 20px;
+}
+.contact-us .icons span{
+    display: block;
+    margin: 15px;
+    cursor: pointer;
+}
+.footer-text{
+    padding-left: 0;
+}
+.footer-text .visit-us{
+    border-bottom: 1px solid;
+    padding: 70px 20px;
+    height: 225px;
+}
+.footer-text .all-rights-reserved{
+    padding: 20px 20px 0 20px;
+}
