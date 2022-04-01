@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 hr{
     background-color: #aca7a7;
     box-sizing: content-box;
@@ -60,6 +63,10 @@ header{
     background-color: #010ea5;
     color:white
 }
+.navbar .btn .nav-link{
+    color:white;
+    margin-right: 0;
+}
 .main-concept{
     color: white;
     margin-top: 170px;
@@ -85,15 +92,16 @@ header{
     margin-bottom: 100px;
 
 }
-
 .why-us-container{
     margin-left: 90px;
     margin-top: 90px;
+    height: 400px;
 }
 .why-us .card{
     margin-right: 57px;
     text-align: center;
     height: 300px;
+    box-shadow: 10px 10px 10px #969393;
 }
 .why-us .first-card,
 .why-us .third-card{
@@ -101,7 +109,7 @@ header{
 }
 .why-us .second-card {
     position: relative;
-    top: 50px;
+    top: 70px;
     background-color: #040477;
 }
 /*********************** reg-form ***********************/

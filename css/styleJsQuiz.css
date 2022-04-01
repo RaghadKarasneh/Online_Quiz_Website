@@ -5,22 +5,7 @@
 html {
     scroll-behavior: smooth;
   }
-hr{
-    background-color: #aca7a7;
-    box-sizing: content-box;
-    height: 0.5px;
-    overflow: visible;
-    width: 8%;
-    margin: 0 auto;
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    color: inherit;
-    border-top: 1px solid rgba(0,0,0,.1);
-    opacity: unset!important;
-}
-/************************ Header ************************/
-
-/***** Navbar ****/
+/* **********************Header********************* */
 .navbar .navbar-brand{
     font-size: 40px;
     color: black;
@@ -46,31 +31,8 @@ hr{
     color:white;
     margin-right: 0;
 }
-/************************* Result ***********************/
-.container{
-    margin-top: 100px;
-    margin-bottom: 150px;
-}
-.result{
-    margin-top: 150px;
-}
-.result .result-text{
-    margin-right: 130px;
-    margin-top: 70px;
-}
-.result .result-text .btn{
-    background-color: #fd7e6d;
-    height: 50px;
-    margin-top: 50px;
-}
-.result .table{
-    border: 2px solid #dee2e6;
-}
-.table th,
-.table .td{
-    border-right: 2px solid #dee2e6;
-}
-/************************* Footer ***********************/
+/* **********************footer********************* */
+
 footer{
     background-color: #040477;
     color: white;
@@ -102,4 +64,45 @@ footer .contact-us{
 }
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
+}
+
+
+
+.counter{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 172px;
+    width: 158px;
+    text-align: center;
+    padding-top: 50px;
+    float: right;
+    border: 12px double rgb(204, 209, 228);
+}
+
+
+
+/* *********************buttonNext***************** */
+ /* .btn-next{
+     height: 78px;
+     width:200px;
+     background-color: rgb(254, 126, 109);
+     color: white;
+     font-size: larger;
+     position: absolute;
+     left: 50px;
+     top: 50px;
+ } */
+
+ .btn-next{
+    background-color:rgb(254, 126, 109);
+    height: 50px;
+    margin-top: 50px;
+    position: absolute;
+     left: 50%;
+   color:white;
+ 
+   
+}
+.quiz-body{
+    margin: 150px auto;
 }

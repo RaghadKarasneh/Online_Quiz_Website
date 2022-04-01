@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 hr{
     background-color: #aca7a7;
     box-sizing: content-box;
@@ -38,6 +41,10 @@ hr{
     padding: 10px 30px;
     background-color: #010ea5;
     color:white
+}
+.navbar .btn .nav-link{
+    color:white;
+    margin-right: 0;
 }
 /************************ Welcom ************************/
 .container{
