@@ -146,6 +146,11 @@ header{
     color:white;
     margin-right: 0;
 }
+
+/*The hidden Form*/
+#regs_form-hidden{
+    display: none;
+}
 /************************* Footer ***********************/
 footer{
     background-color: #040477;
@@ -178,4 +183,9 @@ footer .contact-us{
 }
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
+}
+
+
+#nextButton{
+    display: none;
 }

@@ -117,3 +117,11 @@ function handelSubmit(e){
     regSubmitButton.href='./welcome.html';
 }
 handelSubmit();
+
+/************************************************* */
+//When the user will click on Sign in button
+regFormx.addEventListener('button',handelSignIn);
+function handelSignIn(e){
+  
+
+}
