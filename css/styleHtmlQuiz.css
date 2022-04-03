@@ -1,14 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 html {
     scroll-behavior: smooth;
   }
-/* **********************Header********************* */
+
+  /* *******Header******** */
 .navbar .navbar-brand{
-    font-size: 40px;
-    color: black;
+    font-size: 80px;
+    color:  #010ea5;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 .navbar .container-fluid{
     height: 100px;
@@ -31,7 +35,59 @@ html {
     color:white;
     margin-right: 0;
 }
-/* **********************footer********************* */
+/* *********button********** */
+#nextButton{
+    /*display: none;*/
+    text-decoration: none;
+    color:white; 
+}
+
+
+#btn-next{
+    display: none;
+    background-color: #fd7e6d;
+    height: 50px;
+    width:50%;
+    margin-top: 50px;
+    position: absolute;
+     left: 50%;
+   color:white;   
+}
+
+.quiz-body{
+    margin: 150px auto;
+}
+
+.btn-answer-style{
+    height:70px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 3px solid rgb(47, 58, 143);
+    border-radius: 20px;
+    background-color:rgb(204, 209, 228);
+    
+}
+/* ********p(question)********** */
+#questions{
+    font-size: larger;
+    font-family: 'Lato', sans-serif;
+    /* font-weight: bold; */
+}
+
+/* **********Timer countdown************ */
+.counter{
+    font-size:xx-large;
+    font-weight: bold;
+    border-radius: 50%;
+    height: 210px;
+    width: 206px;
+    text-align: center;
+    padding-top: 70px;
+    float: right;
+    border: 12px double  rgb(47, 58, 143);
+}
+
+/* *******footer******** */
 
 footer{
     background-color: #040477;
@@ -65,48 +121,3 @@ footer .contact-us{
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
 }
-
-
-
-.counter{
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 172px;
-    width: 158px;
-    text-align: center;
-    padding-top: 50px;
-    float: right;
-    border: 12px double gray;
-}
-
-
-
-/* *********************buttonNext***************** */
- /* .btn-next{
-     height: 78px;
-     width:200px;
-     background-color: rgb(254, 126, 109);
-     color: white;
-     font-size: larger;
-     position: absolute;
-     left: 50px;
-     top: 50px;
- } */
-
- .btn-next{
-    background-color: #fd7e6d;
-    height: 50px;
-    margin-top: 50px;
-    position: absolute;
-     left: 50%;
-   color:white;
- 
-   
-}
-.quiz-body{
-    margin: 150px auto;
-}
-
-
-
-

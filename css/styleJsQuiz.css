@@ -106,3 +106,6 @@ footer .contact-us{
 .quiz-body{
     margin: 150px auto;
 }
+#nextButton{
+    display: none;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/styleHtmlQuiz.css">
+  
+</head>
+<body>
+      <!--Start Header which contains the navbar-->
+<header>
+    <!--Start navbar-->
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">OPQ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html #about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html #why-us">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn" type="submit"><a class="nav-link" href="../../index.html">Log Out</a></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--End navbar-->
+    </header>
+    <!--End Header-->
+
+<div class=" container  quiz-body">
+  <div class="row">
+    <div id="questionContainer   "   class="col-lg-8">
+        <p id="questions">questions</p>
+        <div id="answersContainer">
+            <button id="answer1"  class="btn-answer-style">answer1</button>
+         <br>
+         <button id="answer2"  class="btn-answer-style">answer2</button>
+        <br>
+        <button id="answer3"  class="btn-answer-style">answer3</button>
+        <br>
+        </div>
+        <!--**Next button-->
+        <button class="btn col-lg-2" type="submit" id="btn-next"><a id="nextButton">Next</a></button>
+    </div>
+  
+
+
+  <div class="col-lg-4">
+    <div class="counter"  class="timer" >
+      <div><span id="time">03:00</span> </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+ <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
+ <footer>
+    <div class="container-fluid">
+        <div class="row footer-container">
+            <!--* Contact Us *-->
+            <div class="col-lg-4 col-md-4 col-6-12 contact-us text-center" id="contact-us">
+                <h2>Contact Us</h2>
+                <div class="icons">
+                    <span class="fa fa-linkedin fa-3x"></span>
+                    <span class="fa fa-github fa-3x"></span>
+                    <span class="fa fa-envelope-open fa-3x"></span>
+                </div>
+            </div>
+
+            <!--* Footer Text *-->
+            <div class="col-lg-8 col-md-8 col-6-12 footer-text">
+                <!--** Visit Us-->
+                <div class="visit-us">
+                    <h2>Visit Us</h2>
+                    <p>Shafa Badran-near Applied university circle, Amman</p>
+                </div>
+                <!--** All rights reerved-->
+                <div class="all-rights-reserved">
+                    <p>All rights reserved for Orange © 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+    </div>
+    <script src="../../js/appJsQuiz.js"></script>
+</body>
+</html>
