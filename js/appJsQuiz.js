@@ -4,6 +4,7 @@ let answerOne= document.getElementById("answer1");
 let answerTwo= document.getElementById("answer2");
 let answerThree= document.getElementById("answer3");
 let answersContainer=document.getElementById('answersContainer');//quiz form
+let questionNumber=document.getElementById('questionNumber');
 let currentQuestion=0;
 let quizContainer=document.getElementById("questionContainer");
 let nextButton=document.getElementById('nextButton');
@@ -18,24 +19,28 @@ let jsQuiz=[
     {
         questions:" 1- How to you select an element based on its css class?",
         choises:["getElementByClass" ,"querySelector","getElementById"],
-        correctAnswer:"querySelector"
+        correctAnswer:"querySelector",
+        questionQuizNumber:'1'
     
     },
     {
         questions:" 2- How to write an IF statement in JavaScript?",
         choises:["if(i==5)","if i=5","if i=5then"],
-        correctAnswer:"if(i==5)"
+        correctAnswer:"if(i==5)",
+        questionQuizNumber:'2'
     },
     {
         questions:" 3- How do you declare a JavaScript variabble?",
         choises:["variable carName;","none of these","let carName"],
-        correctAnswer:"let carName"
+        correctAnswer:"let carName",
+        questionQuizNumber:'3'
     }
     ,
     {
         questions:" 4- Is it necessary for the external script file to contain a script tag?",
         choises:["Yes","No","None of above"],
-        correctAnswer:"No"
+        correctAnswer:"No",
+        questionQuizNumber:'4'
     },];
 
 /*To start the quize */
@@ -83,6 +88,7 @@ function questionText(question){
     answerOne.innerHTML=question.choises[0];
     answerTwo.innerHTML=question.choises[1];
     answerThree.innerHTML=question.choises[2];
+    questionNumber.innerHTML=question.questionQuizNumber
 }
 
 /*To store the options number after clicking on options */

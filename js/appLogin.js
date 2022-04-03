@@ -10,11 +10,14 @@ function GetDataFromLovalStorage(){
     let parseData=JSON.parse(storageData);
     console.log(parseData[0]);
 
-    console.log('WRONG');
-   if (Xemail==parseData[0].email){
+   if (Xemail.value==parseData[0].email){
+    console.log('email');
 
    if (Xpassword.value==parseData[0].password){
     document.getElementById('submit').href='./welcome.html';
     console.log('TRUE');
-   }}
+    console.log('WRONG');
+   }else 
+   console.log('WRONG');
+}
 }

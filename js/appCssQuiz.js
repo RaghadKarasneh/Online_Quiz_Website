@@ -4,6 +4,7 @@ let answerOne= document.getElementById("answer1");
 let answerTwo= document.getElementById("answer2");
 let answerThree= document.getElementById("answer3");
 let answersContainer=document.getElementById('answersContainer');//quiz form
+let questionNumber=document.getElementById('questionNumber');
 let currentQuestion=0;
 let quizContainer=document.getElementById("questionContainer");
 let nextButton=document.getElementById('nextButton');
@@ -16,26 +17,31 @@ let x=[];
 
 let cssQuiz=[
     {
-        questions:"Which of the below is the abbreviation of CSS ?",
-        choises:[" Cascading style sheets" ," Coded Style Sheet","color and styie sheets"],
-        correctAnswer:"Cascading style sheets"
+        questions:" 1- How to you select an element based on its css class?",
+        choises:["getElementByClass" ,"querySelector","getElementById"],
+        correctAnswer:"querySelector",
+        questionQuizNumber:'1'
     
     },
     {
-        questions:"Which of the below CSS properties is used to change the background color of CSS ?",
-        choises:[" background-color","color-background","color"],
-        correctAnswer:"background-color"
+        questions:" 2- How to write an IF statement in JavaScript?",
+        choises:["if(i==5)","if i=5","if i=5then"],
+        correctAnswer:"if(i==5)",
+        questionQuizNumber:'2'
     },
     {
-        questions:"Which of the below is correct syntax when we put a line over text in CSS ?",
-        choises:[" text-decoration: overline","text-decoration: underline"," text-decoration: none"],
-        correctAnswer:" text-decoration: overline"
-    
-    },
-    {questions:" Where is the meta tag only found?",
-    choises:["The last page","The home page","The second page"],
-    correctAnswer:"The second page"
-}];
+        questions:" 3- How do you declare a JavaScript variabble?",
+        choises:["variable carName;","none of these","let carName"],
+        correctAnswer:"let carName",
+        questionQuizNumber:'3'
+    }
+    ,
+    {
+        questions:" 4- Is it necessary for the external script file to contain a script tag?",
+        choises:["Yes","No","None of above"],
+        correctAnswer:"No",
+        questionQuizNumber:'4'
+    },];
 
 /*To start the quize */
 intitalization();
@@ -66,7 +72,7 @@ function checkAnswer(userAnswer){
 function showNextQuestion(){
     if(currentQuestion==cssQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
-        nextButton.href='../../resultCss.html';
+        nextButton.href='../../cssResult.html';
     }
     else{
        currentQuestion++;
@@ -82,6 +88,7 @@ function questionText(question){
     answerOne.innerHTML=question.choises[0];
     answerTwo.innerHTML=question.choises[1];
     answerThree.innerHTML=question.choises[2];
+    questionNumber.innerHTML=question.questionQuizNumber
 }
 
 /*To store the options number after clicking on options */
@@ -107,11 +114,10 @@ answerTwo.addEventListener('click',function(e){
 function LocalStorageFrom(){
     console.log(correctAnswerCount);
     let array=JSON.stringify(correctAnswerCount); // to send the Answer counter value to result page
-    localStorage.setItem('userAnswersCSSQuiz',array);
+    localStorage.setItem('userCssAnswers',array);
     let array2=JSON.stringify(userQuizAnswers); // to send the answers options number that the user chose to result page
-    localStorage.setItem('userQuizAnswersCSSQuiz',array2)
+    localStorage.setItem('userCssQuizAnswers',array2)
 }
-
 /*Timer: 3 minutes */
 function startTimer(duration, view_date) {
     let countdown = duration, minutes, seconds;
@@ -125,7 +131,7 @@ function startTimer(duration, view_date) {
         view_date.textContent = minutes + ":" + seconds;
 
         if (--countdown < 0) {
-            location.href='../../resultCss.html'
+            location.href='../../cssResult.html'
         }
     }, 1000);
 }
