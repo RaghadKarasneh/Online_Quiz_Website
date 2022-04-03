@@ -25,32 +25,50 @@ this.password=password;
 this.spassword=spassword;
 this.selectList=selectList;
 console.log(this.selectList);
-this.fullName=userName(this.fname,this.lname);
+this.firstName=userFirstName(this.fname);
+this.lastName=userLastName(this.lname);
 this.correctEmail=correctEmail(this.email);
 this.correctPassword=checkPassword(this.password,this.spassword);
-console.log(this.fullName);
-info.push(this);
+
+if(this.firstName,this.lastName,this.correctEmail,this.correctPassword){
+
+}info.push(this);
 
 LocalStorageFrom()
+console.log(this.fullName);
+
+
 }
 
 /*To return the full name */
-function userName(fname,lname){
+function userFirstName(fname){
     nameError.style.display='';
     let x;
-    let regex = /[a-zA-Z\s]+$/;
-    if ((regex.test(fname)) && (regex.test(lname))){
+    let regex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
+    if ((regex.test(fname))){
         console.log('correct');
-        x = fname + ' '+ lname;
-        return x;
+        return true;
     }
     else{
         nameError.style.display='block';
         nameError.innerHTML='Incorrect name! Your name must contain leeters only.';
-        return 'Incorrect name';
+        return false;
     }
 }
-
+function userLastName(lname){
+    nameError.style.display='';
+    let x;
+    let regex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
+    if ((regex.test(lname))){
+        console.log('correct');
+        return true;
+    }
+    else{
+        nameError.style.display='block';
+        nameError.innerHTML='Incorrect name! Your name must contain leeters only.';
+        return false;
+    }
+}
 /*To check from the email */
 function correctEmail(email){
     emailError.innerHTML='';
@@ -58,10 +76,11 @@ function correctEmail(email){
     if (!regex.test(email)){
       emailError.style.display='block';
       emailError.innerHTML= 'Incorrect Email!';
-      return 'Incorrect Email!';
+      return false;
     }
     else{
         emailError.style.display='none';
+        return true;
     }
   }
 
@@ -76,32 +95,37 @@ function checkPassword(password,spassword){
         console.log('password syntax is Incorrect');
         passwordError.style.display='block';
         passwordError.innerHTML= 'password syntax is Incorrect';
+        return false;
         
     }
     else if((!capital.test(password[0])) && (!capital.test(spassword[0]))){ //To check from the first letter
         console.log( 'Incorrect! first name must be capital.');
         passwordError.style.display='block';
         passwordError.innerHTML= 'Incorrect! first name must be capital.';
+        return false;
     }
     else if((!num.test(password))&&(!num.test(spassword))){
         console.log('Your password must contain 2 numbers at least');
         passwordError.style.display='block';
         passwordError.innerHTML= 'You password must contain 2 numbers at least';
+        return false;
     }
     else if((!symboles.test(password)) && !symboles.test(spassword)){
         console.log('Your password must contain  at least 1 character');
         passwordError.style.display='block';
         passwordError.innerHTML= 'You password must contain  at least 1 character';
+        return false;
     }
-    else if((password===spassword) &&(password.length>=8 && password.length<=32) &&(spassword.length>=8 && spassword.length<=32)){
+    else if(password===spassword){
         console.log('password syntax is correct');
         console.log('The first name is capital');
         console.log( 'Passwords match');
         passwordError.style.display='none';
+        return true;
     }else{
-       console.log(`Passwords don't match or the length is more than 8 or less than 32`);
        passwordError.style.display='block';
        passwordError.innerHTML= `Passwords don't match or the length is incorrect (length must be more or equal than 8 and less than or equal 32`;
+       return false;
     }
 }
 regFormx.addEventListener('submit', handelSubmit);
@@ -114,7 +138,7 @@ function handelSubmit(e){
     let spassword=e.target.spassword.value;
     let selectList=e.target.selectList.value;
     new regForm(fname,lname,email,password,spassword,selectList); //Calling the constructor
-    regSubmitButton.href='./welcome.html';
+    regSubmitButton.href='./login.html';
 }
 handelSubmit();
 

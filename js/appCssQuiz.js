@@ -66,7 +66,7 @@ function checkAnswer(userAnswer){
 function showNextQuestion(){
     if(currentQuestion==cssQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
-        nextButton.href='../../result.html';
+        nextButton.href='../../resultCss.html';
     }
     else{
        currentQuestion++;
@@ -104,13 +104,13 @@ answerTwo.addEventListener('click',function(e){
 
 
 /*Local storage */
-/*function LocalStorageFrom(){
+function LocalStorageFrom(){
     console.log(correctAnswerCount);
     let array=JSON.stringify(correctAnswerCount); // to send the Answer counter value to result page
-    localStorage.setItem('userAnswers',array);
+    localStorage.setItem('userAnswersCSSQuiz',array);
     let array2=JSON.stringify(userQuizAnswers); // to send the answers options number that the user chose to result page
-    localStorage.setItem('userQuizAnswers',array2)
-}*/
+    localStorage.setItem('userQuizAnswersCSSQuiz',array2)
+}
 
 /*Timer: 3 minutes */
 function startTimer(duration, view_date) {
@@ -125,7 +125,7 @@ function startTimer(duration, view_date) {
         view_date.textContent = minutes + ":" + seconds;
 
         if (--countdown < 0) {
-            location.href='../../result.html'
+            location.href='../../resultCss.html'
         }
     }, 1000);
 }

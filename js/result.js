@@ -12,11 +12,11 @@ function GetDataFromLovalStorage(){//to recive the locale storage value
     let storageDataAnswers=localStorage.getItem('userQuizAnswers'); // for user answers
     let parseData=JSON.parse(storageData); //store the correct answers counter
     let parseDataAnswers=JSON.parse(storageDataAnswers);
-    renderInformation(parseData,parseDataAnswers,userinfo);
+    renderInformation(parseData,parseDataAnswers);
 }
 GetDataFromLovalStorage();
 
-function renderInformation(parseData,parseDataAnswers,userinfo){
+function renderInformation(parseData,parseDataAnswers){
     console.log('hello');
     let correctQuizAnswers=[1,3,3,2];
     for (let i=0;i<correctQuizAnswers.length;i++){
@@ -25,7 +25,7 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         } else
         console.log(parseDataAnswers[i],'false');
     }
-    resultP.innerHTML= `Hello! your score is ${userinfo}`;
+    //resultP.innerHTML= `Hello! your score is ${userinfo}`;
      
         //resultP.innerHTML= `Hello! your score is ${parseData}, the answers are ${parseDataAnswers}`;
         

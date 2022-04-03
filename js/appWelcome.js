@@ -22,19 +22,19 @@ function renderInformation(parseData){
             welcomeP.innerHTML=`Welcome to OPQ Form!
             The test is not official, it's just a nice way to see how much you know, or don't know, about HTML.
             When the test starts,you will have 3 minutes to complete.`;
-            quizButton.href='../../js/htmlQuiz.html';
+            quizButton.href='../../Quiz/html/htmlQuiz.html'; // you have to check from the link
         }
         else if (i.selectList=='CSS'){
             welcomeP.innerHTML=`Welcome to OPQ Form!
             The test is not official, it's just a nice way to see how much you know, or don't know, about CSS.
             When the test starts,you will have 3 minutes to complete.`;
-            quizButton.href='./Quizes/css/cssQuiz.html';
+            quizButton.href='./Quizes/css/cssQuiz.html'; //// you have to check from the link
         }
         else if (i.selectList=='JavaScript'){
             welcomeP.innerHTML=`Welcome to OPQ Form!
             The test is not official, it's just a nice way to see how much you know, or don't know, about JavaScript.
             When the test starts,you will have 3 minutes to complete.`;
-            quizButton.href='./Quizes/js/jsQuiz.html';
+            quizButton.href='./Quizes/js/jsQuiz.html';//// you have to check from the link
         }
     })
 }
