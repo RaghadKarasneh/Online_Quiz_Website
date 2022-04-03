@@ -6,7 +6,7 @@ let resultP=document.getElementById('result-text');
     let userinfo=JSON.parse(storageDataUserInfo);*/
 
 /*To get the correct answers */
-function GetDataFromLovalStorage(){//to recive the locale storage value
+function GetJsDataFromLocalStorage(){//to recive the locale storage value
     let storageData=localStorage.getItem('userAnswers'); // for the counter
 
     let storageDataAnswers=localStorage.getItem('userQuizAnswers'); // for user answers
@@ -14,7 +14,7 @@ function GetDataFromLovalStorage(){//to recive the locale storage value
     let parseDataAnswers=JSON.parse(storageDataAnswers);
     renderInformation(parseData,parseDataAnswers);
 }
-GetDataFromLovalStorage();
+GetJsDataFromLocalStorage();
 
 function renderInformation(parseData,parseDataAnswers){
     console.log('hello');

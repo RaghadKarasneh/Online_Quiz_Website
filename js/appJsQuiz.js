@@ -72,7 +72,7 @@ function checkAnswer(userAnswer){
 function showNextQuestion(){
     if(currentQuestion==jsQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
-        nextButton.href='../../result.html';
+        nextButton.href='../../jsResult.html';
     }
     else{
        currentQuestion++;
@@ -131,7 +131,7 @@ function startTimer(duration, view_date) {
         view_date.textContent = minutes + ":" + seconds;
 
         if (--countdown < 0) {
-            location.href='../../result.html'
+            location.href='../../jsResult.html'
         }
     }, 1000);
 }
