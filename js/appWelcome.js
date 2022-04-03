@@ -22,7 +22,7 @@ function renderInformation(parseData){
             welcomeP.innerHTML=`Welcome to OPQ Form!
             The test is not official, it's just a nice way to see how much you know, or don't know, about HTML.
             When the test starts,you will have 3 minutes to complete.`;
-            quizButton.href='./Quizes/html/htmlQuiz.html';
+            quizButton.href='../../js/htmlQuiz.html';
         }
         else if (i.selectList=='CSS'){
             welcomeP.innerHTML=`Welcome to OPQ Form!
