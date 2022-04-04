@@ -21,7 +21,7 @@ let jsQuiz=[
         choises:["getElementByClass" ,"querySelector","getElementById"],
         correctAnswer:"querySelector",
         questionQuizNumber:'1'
-    
+
     },
     {
         questions:" 2- How to write an IF statement in JavaScript?",
@@ -41,7 +41,14 @@ let jsQuiz=[
         choises:["Yes","No","None of above"],
         correctAnswer:"No",
         questionQuizNumber:'4'
-    },];
+    },
+    {
+        questions:" 5- Which built-in method calls a function for each element in the array? ",
+        choises:["while()","loop()","forEach()"],
+        correctAnswer:"forEach()",
+        questionQuizNumber:'5'
+    }
+];
 
 /*To start the quize */
 intitalization();

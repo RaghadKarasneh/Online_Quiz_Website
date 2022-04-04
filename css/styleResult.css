@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
 }
 html {
     scroll-behavior: smooth;
@@ -21,10 +22,14 @@ hr{
 /************************ Header ************************/
 
 /***** Navbar ****/
+
 .navbar .navbar-brand{
-    font-size: 40px;
+    font-size: 80px;
     color: black;
-}
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+   
+ }
 .navbar .container-fluid{
     height: 100px;
 }
@@ -39,7 +44,7 @@ hr{
 }
 .navbar .btn{
     padding: 10px 30px;
-    background-color: #010ea5;
+    background-color: #212529;
     color:white
 }
 .navbar .btn .nav-link{
@@ -51,28 +56,47 @@ hr{
     margin-top: 100px;
     margin-bottom: 150px;
 }
+#htmltable{
+    display: none;
+}
+
 .result{
     margin-top: 150px;
 }
 .result .result-text{
-    margin-right: 130px;
-    margin-top: 70px;
+    margin-right: 90px;
+    
+}
+.result p{
+    font-size: 18px;
 }
 .result .result-text .btn{
-    background-color: #fd7e6d;
+    color: white;
+    border-radius: 10px;
+    background-color: #212529;
     height: 50px;
     margin-top: 50px;
 }
-.result .table{
-    border: 2px solid #dee2e6;
+
+#video{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.2;
 }
-.table th,
-.table .td{
-    border-right: 2px solid #dee2e6;
+.table{
+    transition: 1s ease-in-out;
 }
 /************************* Footer ***********************/
 footer{
-    background-color: #040477;
+    background-color: #212529;
     color: white;
 }
 footer .container-fluid{

@@ -151,6 +151,15 @@ header{
 #regs_form-hidden{
     display: none;
 }
+#submit-btn-form,
+#sign-in{
+    border-radius: 20px;
+    margin-right: 20px;
+}
+#positionSelect{
+    padding: 5px !important;
+    border: 5px double gray !important;
+}
 /************************* Footer ***********************/
 footer{
     background-color: #040477;

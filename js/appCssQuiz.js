@@ -17,31 +17,40 @@ let x=[];
 
 let cssQuiz=[
     {
-        questions:" 1- How to you select an element based on its css class?",
-        choises:["getElementByClass" ,"querySelector","getElementById"],
-        correctAnswer:"querySelector",
+        questions:" 1-Which of the below is the abbreviation of CSS ?",
+        choises:[" Cascading style sheets" ," Coded Style Sheet","color and styie sheets"],
+        correctAnswer:"Cascading style sheets",
         questionQuizNumber:'1'
     
     },
     {
-        questions:" 2- How to write an IF statement in JavaScript?",
-        choises:["if(i==5)","if i=5","if i=5then"],
-        correctAnswer:"if(i==5)",
+        questions:" 2-Which of the below CSS properties is used to change the background color of CSS ?",
+        choises:[" background-color","color-background","color"],
+        correctAnswer:"background-color",
         questionQuizNumber:'2'
     },
     {
-        questions:" 3- How do you declare a JavaScript variabble?",
-        choises:["variable carName;","none of these","let carName"],
-        correctAnswer:"let carName",
+        questions:" 3-Which of the below is correct syntax when we put a line over text in CSS ?",
+        choises:[" text-decoration: overline","text-decoration: underline"," text-decoration: none"],
+        correctAnswer:" text-decoration: overline",
         questionQuizNumber:'3'
-    }
-    ,
+    
+    },
     {
-        questions:" 4- Is it necessary for the external script file to contain a script tag?",
-        choises:["Yes","No","None of above"],
-        correctAnswer:"No",
+        questions:" 4-Which below property in CSS is used to set the indentation of the first line in a block of text ?",
+        choises:["text-indent property "," text-underlne-property","text-decoration none"],
+        correctAnswer:" text-indent property",
         questionQuizNumber:'4'
-    },];
+    
+    },
+    {
+    questions:" 5-Which of the below CSS properties represent the order of flex items in the grid container ? ?",
+    choises:["order "," flot","overflow"],
+    correctAnswer:"order",
+    questionQuizNumber:'5'
+    
+    },
+    ];
 
 /*To start the quize */
 intitalization();
