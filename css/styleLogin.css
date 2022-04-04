@@ -30,3 +30,11 @@ h2{
     color: white;
     border-radius: 10px;
 }
+@media screen and (max-width:992px) {
+    #loginForm{
+        width: 95%;
+    }
+    .btn{
+        left: unset;
+    }
+}

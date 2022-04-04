@@ -44,12 +44,49 @@ let cssQuiz=[
     
     },
     {
-    questions:" 5-Which of the below CSS properties represent the order of flex items in the grid container ? ?",
+    questions:" 5-Which of the below CSS properties represent the order of flex items in the grid container ?",
     choises:["order "," flot","overflow"],
     correctAnswer:"order",
     questionQuizNumber:'5'
     
     },
+    {
+        questions:" 6-Which of the correct syntax to add the external stylesheet in CSS ?",
+        choises:[`< stylesheet > quiz.css </ stylesheet > `,`< link rel=”stylesheet” type=”quiz/css” href=”quiz.css” > `,` < style src = quiz.css >`],
+        correctAnswer:"< link rel=”stylesheet” type=”quiz/css” href=”quiz.css” >",
+        questionQuizNumber:'6'
+        
+        },
+        {
+            questions:" 7-Which property in CSS is responsible for setting the difference between two lines ?",
+            choises:[" max-height property"," min-height property "," line-height property"],
+            correctAnswer:" line-height property",
+            questionQuizNumber:'7'
+            
+            },
+            {
+                questions:" 8-Which below function in CSS is used to perform the calculation ?",
+                choises:["calc() function "," cal() function ","calculator() function"],
+                correctAnswer:" calc() function",
+                questionQuizNumber:'8'
+                
+                },
+                {
+                    questions:" 9-Which of the below CSS property is used to set the origin of the background image in bootstraps ? ",
+                    choises:["background-image "," background-origin ","background-size"],
+                    correctAnswer:" background-origin",
+                    questionQuizNumber:'9'
+                    
+                    },
+                    {
+                        questions:" 10-Which below CSS property best describes how an image or video fits into a container ? ",
+                        choises:["position-hide ","object-move  ","object-fit"],
+                        correctAnswer:"object-fit",
+                        questionQuizNumber:'10'
+                        
+                        },
+        
+    
     ];
 
 /*To start the quize */

@@ -31,7 +31,7 @@ GetHtmlDataFromLocalStorage();
 
 function renderInformation(parseData,parseDataAnswers,userinfo){
 
-    let correctQuizAnswers=[1,1,1,3,3]; //The correct Html quiz answers
+    let correctQuizAnswers=[1,1,1,3,3,2,3,2,2,2]; //The correct Html quiz answers
 
     for (let i=0;i<correctQuizAnswers.length;i++){
         /*To add a row and cells with the questions number and true ot false value depends on the user answers */

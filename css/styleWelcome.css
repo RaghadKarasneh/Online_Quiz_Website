@@ -55,13 +55,22 @@ hr{
     margin-top: 50px;
 }
 .welcome .btn{
-    background-color: #fd7e6d;
-    height: 50px;
+    background-color: white;
+    height: 60px;
     margin-top: 50px;
+    border: 8px solid #fd7e6d;
+    transition: 0.5s ease-in-out;
+}
+.welcome .btn:hover{
+    background-color: #fd7e6d;
+    color: white;
 }
 .welcome .btn a{
     text-decoration: none;
     color: black;
+}
+.welcome .btn a:hover{
+    color: white;
 }
 /************************* Footer ***********************/
 footer{
@@ -103,7 +112,19 @@ footer .contact-us a{
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
 }
-
+@media screen and (max-width:992px) {
+    #contact-us{
+        border-right:unset;
+    }
+    .visit-us,
+    .all-rights-reserved{
+        text-align: center;
+    }
+    .footer-text{
+        padding: 10px 13px;
+    }
+    
+}
 
 #nextButton{
     display: none;

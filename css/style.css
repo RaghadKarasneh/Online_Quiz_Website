@@ -1,7 +1,8 @@
 /*This style page is for home */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box ;
 }
 body{
     overflow-x: hidden;
@@ -70,6 +71,12 @@ header{
     color:white;
     margin-right: 0;
 }
+.navbar-toggler{
+    border: 2px solid white;
+}
+.navbar ul{
+    text-align:center
+}
 .main-concept{
     color: white;
     margin-top: 170px;
@@ -80,6 +87,9 @@ header{
 .main-concept p{
     font-size: 30px;
     margin-top: 120px;
+}
+.d-flex .btn{
+    margin: auto;
 }
 
 /************************ About Us ************************/
@@ -211,4 +221,61 @@ footer .contact-us a{
 
 #nextButton{
     display: none;
+}
+
+@media (max-width:992px) {
+    header{
+        height: unset;
+    }
+    .header-video{
+        height: inherit;
+    }
+    .container-fluid {
+        height: 1000px;
+    }
+    .navbar .nav-link {
+        margin-right: 0 !important;
+    }
+    .about-us-text{
+        text-align: center;
+    }
+    .about-us-text hr{
+        margin: auto;
+    }
+    .about-us-img img{
+        float: unset;
+        margin: 20px auto;
+        text-align: center;
+        left: 25%;
+        position: relative;
+    }
+    .card{
+        margin: auto;
+    }
+    .why-us .first-card,
+    .why-us .second-card,
+    .why-us .third-card{
+        margin: auto;
+    }
+    .why-us .second-card{
+        position: relative;
+        top: 0px
+    }
+    .why-us hr{
+        margin-bottom: 40px !important;
+    }
+    .why-us-container{
+        margin: unset;
+        height: unset;
+    }
+    #submit-btn-form{
+    margin-bottom: 20px !important;
+    }
+    .visit-us,
+    .all-rights-reserved{
+        text-align: center;
+    }
+    .footer-text{
+        padding: 10px 13px;
+    }
 }

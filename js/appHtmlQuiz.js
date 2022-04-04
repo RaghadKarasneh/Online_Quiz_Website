@@ -27,7 +27,7 @@ let htmlQuiz=[
     {
         questions:" 2-Which of the following HTML Elements is used for making any text bold ?",
         choises:[`<  b >`,` < p >`,` < i >`],
-        correctAnswer:"<b>",
+        correctAnswer:"< b >",
         questionQuizNumber:'2'
     
     },
@@ -39,8 +39,6 @@ let htmlQuiz=[
     
     },
     {
-    
-    
         questions:"4- Where is the meta tag only found?",
         choises:["The last page","The home page","The second page"],
         correctAnswer:"The second page",
@@ -52,8 +50,36 @@ let htmlQuiz=[
         correctAnswer:" None of the above",
         questionQuizNumber:'5'
     },
-    
-    
+    {
+        questions:"6-How is document type initialized in HTML5.?",
+        choises:["< /DOCTYPE >","< /DOCTYPE HTML >","< !DOCTYPE HTML > "],
+        correctAnswer:"< !DOCTYPE HTML > ",
+        questionQuizNumber:'6'
+    },
+    {
+        questions:"7-Which of the following HTML element is used for creating an unordered list?",
+        choises:[" < ui >"," < i >"," < ul >"],
+        correctAnswer:" < ul > ",
+        questionQuizNumber:'7'
+    },
+    {
+        questions:"8-Which of the following characters indicate closing of a tag? ",
+        choises:[". ","/ ","! "],
+        correctAnswer:" / ",
+        questionQuizNumber:'8'
+    },
+    {
+        questions:"9-Which of the following is the correct way of creating an hyperlink in HTML?",
+        choises:[" <a link=“www.geeksforgeeks.org” Geeksforgeeks> </a> "," <a href= “www.geeksforgeeks.org”>Geeksforgeeks</a> ","  <a href=“www.geeksforgeeks.org” Geeksforgeeks /a>"],
+        correctAnswer:"  <a href= “www.geeksforgeeks.org”>Geeksforgeeks</a> ",
+        questionQuizNumber:'9'
+    },
+    {
+        questions:"10-How many heading tags are there in HTML5??",
+        choises:[" 2"," 6"," 5"],
+        correctAnswer:" 6 ",
+        questionQuizNumber:'10'
+    },
     ];
 
 /*To start the quize */

@@ -139,3 +139,33 @@ footer .contact-us a{
 #nextButton{
     display: none;
 }
+
+@media (max-width:992px) {
+   .result .result-text{
+        margin-right: unset;
+    }
+    .table{
+        margin-top: 50px;
+    }
+    #contact-us{
+        border-right:unset;
+    }
+    .visit-us,
+    .all-rights-reserved{
+        text-align: center;
+    }
+    .footer-text{
+        padding: 10px 13px;
+    }
+    .quiz-body{
+        text-align: center;
+    }
+    .counter-container{
+        margin-top: 60px;
+    }
+    .counter{
+        float: unset;
+    margin: auto;
+    }
+    
+}

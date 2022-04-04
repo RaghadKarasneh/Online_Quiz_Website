@@ -27,11 +27,11 @@ function GetCssDataFromLocalStorage(){//to recive the locale storage value
 
     renderInformation(parseData,parseDataAnswers,userinfo);
 }
-GetcssDataFromLocalStorage();
+GetCssDataFromLocalStorage();
 
 function renderInformation(parseData,parseDataAnswers,userinfo){
 
-    let correctQuizAnswers=[1,1,1,1,1]; //The correct Html quiz answers
+    let correctQuizAnswers=[1,1,1,1,1,2,3,1,2,3] ; //The correct Html quiz answers
 
     for (let i=0;i<correctQuizAnswers.length;i++){
         /*To add a row and cells with the questions number and true ot false value depends on the user answers */

@@ -17,72 +17,70 @@ let x=[];
 
 let jsQuiz=[
     {
-        questions:"1- What does HTML stands for?",
-        choises:["Hypertext Markup Language. " ,"Hypertext Machine language. "," Hypertext and links markup language."],
-        correctAnswer:"Hypertext Markup Language.",
+        questions:" 1- How to you select an element based on its css class?",
+        choises:["getElementByClass" ,"querySelector","getElementById"],
+        correctAnswer:"querySelector",
         questionQuizNumber:'1'
-    
-    
+
     },
     {
-        questions:" 2-Which of the following HTML Elements is used for making any text bold ?",
-        choises:[`<  b >`,` < p >`,` < i >`],
-        correctAnswer:"<b>",
+        questions:" 2- How to write an IF statement in JavaScript?",
+        choises:["if(i==5)","if i=5","if i=5then"],
+        correctAnswer:"if(i==5)",
         questionQuizNumber:'2'
-    
     },
     {
-        questions:" 3-Which of the following attributes is used to add link to any element?",
-        choises:["href","ref","link"],
-        correctAnswer:"href",
+        questions:" 3- How do you declare a JavaScript variabble?",
+        choises:["variable carName;","none of these","let carName"],
+        correctAnswer:"let carName",
         questionQuizNumber:'3'
-    
-    },
+    }
+    ,
     {
-    
-    
-        questions:"4- Where is the meta tag only found?",
-        choises:["The last page","The home page","The second page"],
-        correctAnswer:"The second page",
+        questions:" 4- Is it necessary for the external script file to contain a script tag?",
+        choises:["Yes","No","None of above"],
+        correctAnswer:"No",
         questionQuizNumber:'4'
     },
     {
-        questions:"5- How many attributes are there in HTML5?",
-        choises:["2","4"," None of the above"],
-        correctAnswer:" None of the above",
+        questions:" 5- Which built-in method calls a function for each element in the array? ",
+        choises:["while()","loop()","forEach()"],
+        correctAnswer:"forEach()",
         questionQuizNumber:'5'
     },
     {
-        questions:"6-How is document type initialized in HTML5.?",
-        choises:["</DOCTYPE>","</DOCTYPE HTML>","<!DOCTYPE HTML> "],
-        correctAnswer:"<!DOCTYPE HTML> ",
+        questions:" 6- Which built-in method returns the string representation of the number's value? ",
+        choises:[" toString()","None of the above.","toNumber()"],
+        correctAnswer:" toString()",
         questionQuizNumber:'6'
     },
     {
-        questions:"7-Which of the following HTML element is used for creating an unordered list?",
-        choises:[" <ui>"," <i>"," <ul>"],
-        correctAnswer:" <ul> ",
+        questions:" 7- Which of the following function of String object splits a String object into an array of strings by separating the string into substrings?",
+        choises:["  slice()","replace()"," split()"],
+        correctAnswer:"split()",
         questionQuizNumber:'7'
     },
     {
-        questions:"8-Which of the following characters indicate closing of a tag? ",
-        choises:[". ","/ ","! "],
-        correctAnswer:" / ",
+        questions:" 8- Which of the following function of String object returns the calling string value converted to upper case?  ",
+        choises:[" toUpperCase()"," toString()"," toLocaleUpperCase()"],
+        correctAnswer:"toUpperCase()",
         questionQuizNumber:'8'
     },
     {
-        questions:"9-Which of the following is the correct way of creating an hyperlink in HTML?",
-        choises:[" <a link=“www.geeksforgeeks.org” Geeksforgeeks> </a> "," <a href= “www.geeksforgeeks.org”>Geeksforgeeks</a> ","  <a href=“www.geeksforgeeks.org” Geeksforgeeks /a>"],
-        correctAnswer:"  <a href= “www.geeksforgeeks.org”>Geeksforgeeks</a> ",
+        questions:" 9-Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
+        choises:["map() ","push()"," join()"],
+        correctAnswer:"push()",
         questionQuizNumber:'9'
     },
     {
-        questions:"10-How many heading tags are there in HTML5??",
-        choises:[" 2"," 6"," 5"],
-        correctAnswer:" 6 ",
+        questions:" 10- Which of the following function of Boolean object returns the primitive value of the Boolean object? ",
+        choises:[" None of the above. ","toSource()","valueOf()"],
+        correctAnswer:"valueOf() ",
         questionQuizNumber:'10'
     },
-    ];
+
+
+];
 
 /*To start the quize */
 intitalization();
