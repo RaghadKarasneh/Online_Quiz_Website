@@ -149,6 +149,9 @@ footer .contact-us a{
 
 
 @media (max-width:1200px) {
+    .navbar .nav-link{
+        color: white !important;
+    }
     .collapse.show{
         background-color: black;
         z-index: 111;
