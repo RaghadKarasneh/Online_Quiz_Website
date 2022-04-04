@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styleLogin.css">
+    <title>Log in</title>
 </head>
 <body>
-    <form>
-        <input type="email" name="loginEmail" id="loginEmail"> Email
-        <input type="password" name="loginPassword" id="loginPassword">Password
-        <button type="button" onclick="GetDataFromLovalStorage()"><a id="submit">Submit</a></button>
-    </form>
+
+    <form id="loginForm">
+        <h2>Please Insert your E-mail and your password to Sign in</h2>
+        <div class="mb-3 inputDiv">
+          <label for="loginEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="loginEmail" id="loginEmail" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3 inputDiv">
+          <label for="loginPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" name="loginPassword" id="loginPassword">
+        </div>
+        <button type="button" onclick="GetDataFromLovalStorage()" class="btn col-lg-6 text-center"><a id="submit">Submit</a></button>
+      </form>
     <script src="./js/appLogin.js"></script>
 </body>
 </html>

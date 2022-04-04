@@ -11,13 +11,15 @@ function GetDataFromLovalStorage(){
     console.log(parseData[0]);
 
    if (Xemail.value==parseData[0].email){
-    console.log('email');
 
    if (Xpassword.value==parseData[0].password){
-    document.getElementById('submit').href='./welcome.html';
-    console.log('TRUE');
-    console.log('WRONG');
-   }else 
-   console.log('WRONG');
-}
+        document.getElementById('submit').href='./welcome.html';
+        console.log('TRUE');
+        console.log('WRONG');
+   }
+   else 
+    alert('Please Check that you inserted the correct password.');
+  }
+  else 
+    alert('Please Check that you inserted the correct email');
 }
