@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow-x: hidden;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -73,6 +76,10 @@ header{
     font-size: 20px;
     line-height: 2;
     letter-spacing: 1.5px;
+}
+.main-concept p{
+    font-size: 30px;
+    margin-top: 120px;
 }
 
 /************************ About Us ************************/
@@ -177,6 +184,10 @@ footer .contact-us{
     border-right: 1px solid white;
     padding: 20px;
 }
+footer .contact-us a{
+    color: white;
+    text-decoration: none;
+}
 .contact-us .icons span{
     display: block;
     margin: 15px;
@@ -187,8 +198,11 @@ footer .contact-us{
 }
 .footer-text .visit-us{
     border-bottom: 1px solid;
-    padding: 70px 20px;
+    padding: 23px 20px;
     height: 225px;
+}
+.footer-text .visit-us-info{
+    padding: 50px 0px;
 }
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;

@@ -5,22 +5,7 @@
 html {
     scroll-behavior: smooth;
   }
-hr{
-    background-color: #aca7a7;
-    box-sizing: content-box;
-    height: 0.5px;
-    overflow: visible;
-    width: 8%;
-    margin: 0 auto;
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    color: inherit;
-    border-top: 1px solid rgba(0,0,0,.1);
-    opacity: unset!important;
-}
-/************************ Header ************************/
-
-/***** Navbar ****/
+/* **********************Header********************* */
 .navbar .navbar-brand{
     font-size: 40px;
     color: black;
@@ -46,24 +31,8 @@ hr{
     color:white;
     margin-right: 0;
 }
-/************************ Welcom ************************/
-.container{
-    margin-top: 100px;
-    margin-bottom: 150px;
-}
-.container p{
-    margin-top: 50px;
-}
-.welcome .btn{
-    background-color: #fd7e6d;
-    height: 50px;
-    margin-top: 50px;
-}
-.welcome .btn a{
-    text-decoration: none;
-    color: black;
-}
-/************************* Footer ***********************/
+/* **********************footer********************* */
+
 footer{
     background-color: #040477;
     color: white;
@@ -80,10 +49,6 @@ footer .contact-us{
     border-right: 1px solid white;
     padding: 20px;
 }
-footer .contact-us a{
-    color: white;
-    text-decoration: none;
-}
 .contact-us .icons span{
     display: block;
     margin: 15px;
@@ -94,17 +59,53 @@ footer .contact-us a{
 }
 .footer-text .visit-us{
     border-bottom: 1px solid;
-    padding: 23px 20px;
+    padding: 70px 20px;
     height: 225px;
-}
-.footer-text .visit-us-info{
-    padding: 50px 0px;
 }
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
 }
 
 
+
+.counter{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 172px;
+    width: 158px;
+    text-align: center;
+    padding-top: 50px;
+    float: right;
+    border: 12px double rgb(204, 209, 228);
+}
+
+
+
+/* *********************buttonNext***************** */
+ /* .btn-next{
+     height: 78px;
+     width:200px;
+     background-color: rgb(254, 126, 109);
+     color: white;
+     font-size: larger;
+     position: absolute;
+     left: 50px;
+     top: 50px;
+ } */
+
+ .btn-next{
+    background-color:rgb(254, 126, 109);
+    height: 50px;
+    margin-top: 50px;
+    position: absolute;
+     left: 50%;
+   color:white;
+ 
+   
+}
+.quiz-body{
+    margin: 150px auto;
+}
 #nextButton{
     display: none;
 }

@@ -10,7 +10,7 @@ let finalResult=document.getElementById('finalResult');
 
 
 /*To get the correct answers */
-function GetJsDataFromLocalStorage(){//to recive the locale storage value
+function GetCssDataFromLocalStorage(){//to recive the locale storage value
 
     /*To get username */
     let storageDataUserInfo=localStorage.getItem('regData');
@@ -27,7 +27,7 @@ function GetJsDataFromLocalStorage(){//to recive the locale storage value
 
     renderInformation(parseData,parseDataAnswers,userinfo);
 }
-GetJsDataFromLocalStorage();
+GetcssDataFromLocalStorage();
 
 function renderInformation(parseData,parseDataAnswers,userinfo){
 

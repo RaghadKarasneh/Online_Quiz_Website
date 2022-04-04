@@ -105,10 +105,6 @@ footer .contact-us{
     border-right: 1px solid white;
     padding: 20px;
 }
-footer .contact-us a{
-    color: white;
-    text-decoration: none;
-}
 .contact-us .icons span{
     display: block;
     margin: 15px;
@@ -119,39 +115,9 @@ footer .contact-us a{
 }
 .footer-text .visit-us{
     border-bottom: 1px solid;
-    padding: 23px 20px;
+    padding: 70px 20px;
     height: 225px;
-}
-.footer-text .visit-us-info{
-    padding: 50px 0px;
 }
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
-}
-
-
-#nextButton{
-    display: none;
-}
-@media (min-width:425px){
-    #btn-next{
-       width: 100px;
-        position: absolute;
-         left: 2%;
-         top:150%;
-
-    }
-
-
-}
-
-
-@media (max-width:659px) {
-    #btn-next{
-        width: 100px;
-        position: absolute;
-         left: 2%;
-         top:150%;
-
-    }
 }
