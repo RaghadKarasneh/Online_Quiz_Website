@@ -24,14 +24,13 @@ hr{
     opacity: unset!important;
 }
 /************************ Header ************************/
-header{
-    height: 1000px;
-}
-.container-fluid {
+
+header .container-fluid {
     margin: 0 !important;
     padding: 0 !important;
-    position: relative;
-    height: 500px;
+    position: absolute;
+    top: 0;
+
 }
 .header-video{
     position: relative;
@@ -95,6 +94,9 @@ header{
 }
 
 /************************ About Us ************************/
+.about-us{
+    margin-top: 20px;
+}
 .about-us hr{
     width: 12%;
     margin: 0 40px;
@@ -224,7 +226,11 @@ footer .contact-us a{
 #nextButton{
     display: none;
 }
-
+@media (max-width:1420px){
+    .why-us{
+        height: 720px;
+    }
+}
 @media (max-width:992px) {
     .collapse.show{
         background-color: rgb(1, 14, 165);
@@ -273,6 +279,9 @@ footer .contact-us a{
     }
     .card{
         margin: auto;
+    }
+    .why-us{
+        height: unset!important;
     }
     .why-us .first-card,
     .why-us .second-card,

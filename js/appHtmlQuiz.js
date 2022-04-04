@@ -70,8 +70,8 @@ let htmlQuiz=[
     },
     {
         questions:"9-Which of the following is the correct way of creating an hyperlink in HTML?",
-        choises:[" <a link=“www.geeksforgeeks.org” Geeksforgeeks> </a> "," <a href= “www.geeksforgeeks.org”>Geeksforgeeks</a> ","  <a href=“www.geeksforgeeks.org” Geeksforgeeks /a>"],
-        correctAnswer:"  <a href= “www.geeksforgeeks.org”>Geeksforgeeks</a> ",
+        choises:[` < a link=“” Geeksforgeeks> </ a> `,` < a href= “”>Geeksforgeeks</ a> `,`  < a href=“ /a>`],
+        correctAnswer:"  < a href= “”>Geeksforgeeks< /a> ",
         questionQuizNumber:'9'
     },
     {

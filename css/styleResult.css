@@ -148,7 +148,7 @@ footer .contact-us a{
 
 
 
-@media (max-width:992px) {
+@media (max-width:1200px) {
     .collapse.show{
         background-color: black;
         z-index: 111;
