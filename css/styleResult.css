@@ -54,6 +54,9 @@ hr{
     color:white;
     margin-right: 0;
 }
+.navbar ul{
+    text-align:center
+}
 /************************* Result ***********************/
 .container{
     margin-top: 100px;

@@ -36,7 +36,7 @@ hr{
     font-size: 25px;
 }
 .navbar-toggler{
-    border: 2px solid white;
+    border: 2px solid #010ea5;
 }
 .navbar .nav-link{
     color: black;
@@ -50,6 +50,9 @@ hr{
 .navbar .btn .nav-link{
     color:white;
     margin-right: 0;
+}
+.navbar ul{
+    text-align:center
 }
 /************************ Welcom ************************/
 .container{
@@ -120,6 +123,9 @@ footer .contact-us a{
 
 
 @media screen and (max-width:992px) {
+    .navbar ul{
+        color: white;
+    }
     .collapse.show{
         background-color: rgb(1, 14, 165);
         z-index: 111;
