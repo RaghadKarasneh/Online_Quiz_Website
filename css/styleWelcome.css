@@ -35,6 +35,9 @@ hr{
     color: black;
     font-size: 25px;
 }
+.navbar-toggler{
+    border: 2px solid white;
+}
 .navbar .nav-link{
     color: black;
     margin-right: 30px;
@@ -116,10 +119,12 @@ footer .contact-us a{
 }
 
 
-#nextButton{
-    display: none;
-}
 @media screen and (max-width:992px) {
+    .collapse.show{
+        background-color: rgb(1, 14, 165);
+        z-index: 111;
+        border-radius: 10px;
+    }
     #contact-us{
         border-right:unset;
     }
@@ -131,8 +136,4 @@ footer .contact-us a{
         padding: 10px 13px;
     }
     
-}
-
-#nextButton{
-    display: none;
 }

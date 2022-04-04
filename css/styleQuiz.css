@@ -42,7 +42,9 @@ html {
     text-decoration: none;
     color:white; 
 }
-
+.navbar-toggler{
+    border: 2px solid white;
+}
 
 #btn-next{
     display: none;
@@ -146,6 +148,11 @@ footer .contact-us a{
 
 
 @media (max-width:992px) {
+    .collapse.show{
+        background-color: rgb(1, 14, 165);
+        z-index: 111;
+        border-radius: 10px;
+    }
     #questionContainer  {
         height: 500px !important;
     }

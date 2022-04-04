@@ -33,6 +33,9 @@ hr{
 .navbar .container-fluid{
     height: 100px;
 }
+.navbar-toggler{
+    border: 2px solid white;
+}
 .navbar .navbar-collapse ul{
     margin: 10px auto;
     color: black;
@@ -143,6 +146,11 @@ footer .contact-us a{
 
 
 @media (max-width:992px) {
+    .collapse.show{
+        background-color: black;
+        z-index: 111;
+        border-radius: 10px;
+    }
    .result .result-text{
         margin-right: unset;
     }
