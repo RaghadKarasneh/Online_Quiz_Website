@@ -61,7 +61,7 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         td2.style.color='red';
     }
 }//Dear ${userinfo[0].fname}  ${userinfo[0].lname}
-    if(correctAnswers>=3){
+    if(correctAnswers>=5){
         finalResult.innerHTML='Congratulations, you did it!';
         videoCongrats.style.display='block';
         document.body.style.backgroundColor = "#29c429";

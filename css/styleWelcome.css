@@ -22,9 +22,11 @@ hr{
 
 /***** Navbar ****/
 .navbar .navbar-brand{
-    font-size: 40px;
-    color: black;
-}
+    font-size: 80px;
+    color:  #010ea5;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; 
+ }
 .navbar .container-fluid{
     height: 100px;
 }
@@ -111,6 +113,11 @@ footer .contact-us a{
 }
 .footer-text .all-rights-reserved{
     padding: 20px 20px 0 20px;
+}
+
+
+#nextButton{
+    display: none;
 }
 @media screen and (max-width:992px) {
     #contact-us{
