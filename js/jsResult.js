@@ -76,7 +76,7 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         document.body.style.backgroundColor = "#f22929";
         videoCongrats.style.display='none';
     }
-    resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 5, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${5-correctAnswers}.`;
+    resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 5, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${10-correctAnswers}.`;
 }
 
 /*To show the table after clicking the show answers button */
