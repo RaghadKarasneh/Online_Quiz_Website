@@ -32,37 +32,66 @@ GetJsDataFromLocalStorage();
 function renderInformation(parseData,parseDataAnswers,userinfo){
 
     let correctQuizAnswers=[2,1,3,2,3,1,3,1,2,3]; //The correct Html quiz answers
-
+    let question=[
+        'How to you select an element based on its css class?',
+        'How to write an IF statement in JavaScript?',
+        'How do you declare a JavaScript variabble?',
+        'Is it necessary for the external script file to contain a script tag?',
+        'Which built-in method calls a function for each element in the array?',
+        `Which built-in method returns the string representation of the number's value?`,
+        `Which of the following function of String object splits a String object into an array of strings by separating the string into substrings?`,
+        `Which of the following function of String object returns the calling string value converted to upper case?`,
+        `Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?`,
+        `Which of the following function of Boolean object returns the primitive value of the Boolean object?`
+    ]
+    let anwers=[
+        `querySelector`,
+        `if(i==5)`,
+        `let carName`,
+        `No`,
+        `forEach()`,
+        `toString()`,
+        `split()`,
+        `toUpperCase()`,
+        `push()`,
+        `valueOf()`
+    ]
     for (let i=0;i<correctQuizAnswers.length;i++){
         /*To add a row and cells with the questions number and true ot false value depends on the user answers */
       let tr=document.createElement('tr');
       let td1=document.createElement('td');
       let td2=document.createElement('td');
+      let td3=document.createElement('td');
+      let td4=document.createElement('td');
       tableBody.appendChild(tr);
       tr.appendChild(td1);
       tr.appendChild(td2);
-  
+      tr.appendChild(td3);
+      tr.appendChild(td4);
+      correctAnswers=0;
+      td4.innerHTML='false';
       /*To check if user's answers are correct or not and to some actions in  */
       if(parseDataAnswers[i]==correctQuizAnswers[i]){
         console.log(td1);
         console.log(td2);
         td1.innerHTML = i+1;
-        td2.textContent ="true";
+        td2.innerHTML=question[i];
+        td3.innerHTML=anwers[i]
+        td4.textContent ="true";
         correctAnswers=correctAnswers+1;
         console.log(correctAnswers);
-       
-        td1.style.color='green';
-        td2.style.color='green';
+        td4.style.color='green';
         
         }
         else{
         td1.innerHTML = i+1;
-        td2.innerHTML ="false";
+        td2.innerHTML=question[i];
+        td3.innerHTML=anwers[i]
+        td4.innerHTML ="false";
         wrongAnswers=i+1;
         
         videoCongrats.style.display='none';
-        td1.style.color='red';
-        td2.style.color='red';
+        td4.style.color='red';
 
     }
 }//Dear ${userinfo[0].fname}  ${userinfo[0].lname}
@@ -76,7 +105,7 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         document.body.style.backgroundColor = "#f22929";
         videoCongrats.style.display='none';
     }
-    resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 5, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${10-correctAnswers}.`;
+    resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 10, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${10-correctAnswers}.`;
 }
 
 /*To show the table after clicking the show answers button */

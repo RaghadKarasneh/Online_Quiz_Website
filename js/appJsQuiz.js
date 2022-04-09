@@ -3,15 +3,20 @@ let questionBody= document.getElementById("questions"); //Qustion title
 let answerOne= document.getElementById("answer1");
 let answerTwo= document.getElementById("answer2");
 let answerThree= document.getElementById("answer3");
+let input1=document.getElementById('input1');
+let input2=document.getElementById('input2');
+let input3=document.getElementById('input3');
 let answersContainer=document.getElementById('answersContainer');//quiz form
 let questionNumber=document.getElementById('questionNumber');
 let currentQuestion=0;
 let quizContainer=document.getElementById("questionContainer");
 let nextButton=document.getElementById('nextButton');
+let enableNextButton=document.getElementById('btn-next');
 let correctAnswerCount=0;
 let choosedAnswer=0;
 let userQuizAnswers=[];
 let x=[];
+let disableButton=0;
 
 /*Array of object that conatin: questions, answers, and the correct answer */
 
@@ -87,15 +92,21 @@ intitalization();
 
 function intitalization(){
     quizBeginning(); /*We call this function to start from question 1 */
-    answersContainer.addEventListener('click',function(e){
-    let buttonClicked=e.target;
-    checkAnswer(buttonClicked.innerText); // to check the answers and modefied the correct answers counter 
-})    
+   // answersContainer.addEventListener('click',function(e){
+    // let buttonClicked=e.target;
+    // checkAnswer(buttonClicked.innerText); // to check the answers and modefied the correct answers counter 
 }
+//)    }
 
 /*To start the first quiz */
 function quizBeginning(){
-    questionText(jsQuiz[0]);
+   
+    questionBody.innerHTML=jsQuiz[0].questions;
+    answerOne.innerHTML=jsQuiz[0].choises[0];
+    answerTwo.innerHTML=jsQuiz[0].choises[1];
+    answerThree.innerHTML=jsQuiz[0].choises[2];
+    questionNumber.innerHTML=jsQuiz[0].questionQuizNumber;
+    enableNextButton.disabled=true
 }
 
 function checkAnswer(userAnswer){
@@ -104,7 +115,7 @@ function checkAnswer(userAnswer){
         console.log('the counter is:', correctAnswerCount);
     }
     //getUserAnswers();
-    showNextQuestion(); /*we call this function to move for the next question */
+    ; /*we call this function to move for the next question */
     return correctAnswerCount;
 }
 
@@ -114,40 +125,63 @@ function showNextQuestion(){
         nextButton.href='../../jsResult.html';
     }
     else{
-       currentQuestion++;
-       questionText(jsQuiz[currentQuestion]);
+        
+        enableButton();
+    //    currentQuestion++;
+    //    questionText(jsQuiz[currentQuestion]);
+    
        //To bring the question and its answers
     }
     LocalStorageFrom();
 }
 
 /*To bring the question and its answers*/
-function questionText(question){
-    questionBody.innerHTML=question.questions;
-    answerOne.innerHTML=question.choises[0];
-    answerTwo.innerHTML=question.choises[1];
-    answerThree.innerHTML=question.choises[2];
-    questionNumber.innerHTML=question.questionQuizNumber
-}
+// function questionText(question){
+    
+//     questionBody.innerHTML=question.questions;
+//     answerOne.innerHTML=question.choises[0];
+//     answerTwo.innerHTML=question.choises[1];
+//     answerThree.innerHTML=question.choises[2];
+//     questionNumber.innerHTML=question.questionQuizNumber
+// }
 
 /*To store the options number after clicking on options */
 
-answerOne.addEventListener('click',function(e){
-  
+input1.addEventListener('click',function(e) {
+   
     userQuizAnswers.push(1);
+   enableNextButton.disabled=false;
+   //this.checked = false;
+
 });
 
-answerTwo.addEventListener('click',function(e){
+input2.addEventListener('click',function(e){
  
     userQuizAnswers.push(2);
+    enableNextButton.disabled=false
+    
  });
 
- answerThree.addEventListener('click',function(e){
-     ;
-  userQuizAnswers.push(3);
+ input3.addEventListener('click',function(e){
+ 
+    userQuizAnswers.push(3);
+    enableNextButton.disabled=false
 
  });
 
+function enableButton(){
+    currentQuestion++;
+    questionBody.innerHTML=jsQuiz[currentQuestion].questions;
+    answerOne.innerHTML=jsQuiz[currentQuestion].choises[0];
+    answerTwo.innerHTML=jsQuiz[currentQuestion].choises[1];
+    answerThree.innerHTML=jsQuiz[currentQuestion].choises[2];
+    questionNumber.innerHTML=jsQuiz[currentQuestion].questionQuizNumber;
+    enableNextButton.disabled=true;
+    input1.checked = false;
+    input2.checked = false;
+    input3.checked = false;
+   }
+  
 
 /*Local storage */
 function LocalStorageFrom(){
@@ -176,7 +210,7 @@ function startTimer(duration, view_date) {
 }
 
 window.onload = function () {
-   let minutesOfFive = 60 * 3,
+   let minutesOfFive = 5,
         view_date = document.querySelector('#time');
     startTimer(minutesOfFive, view_date);
 };

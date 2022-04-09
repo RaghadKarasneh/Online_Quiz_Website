@@ -123,13 +123,31 @@ footer .contact-us a{
 
 
 @media screen and (max-width:992px) {
-    .navbar ul{
+    .navbar-toggler{
+        right: 15%;
+    position: absolute;
+    top: 46px;
+    }
+    .navbar-collapse,
+    .collapse,
+    .collapse .show{
+        position: absolute;
+        width: 40%;
+        top: 88px;
+        opacity: 0.9;
+        right: 20px;
+        background-color: #040477;
+        z-index: 111;
         color: white;
     }
-    .collapse.show{
-        background-color: rgb(1, 14, 165);
-        z-index: 111;
-        border-radius: 10px;
+    .navbar .nav-link {
+        margin-right: 0 !important;
+        color: white;
+    }
+    .d-flex .btn{
+        position: relative;
+    width: 100%;
+    right: 0;
     }
     #contact-us{
         border-right:unset;

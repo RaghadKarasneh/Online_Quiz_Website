@@ -24,7 +24,9 @@ hr{
     opacity: unset!important;
 }
 /************************ Header ************************/
-
+header{
+    height: 890px;
+}
 header .container-fluid {
     margin: 0 !important;
     padding: 0 !important;
@@ -32,24 +34,37 @@ header .container-fluid {
     top: 0;
 
 }
-.header-video{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0.6;
+.header-container,
+.header-video,
+.header-video video{
+  width:100% ;
+}
+.header-video
+{
+  opacity: 0.6;
+  z-index: -1;
 }
 .header-container{
     position: absolute;
     top:0px;
-    left: 60px;
 }
 /***** Navbar ****/
+.navbar{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  text-align: left;
+  float: left;
+  background-color: transparent;
+}
 .navbar .navbar-brand{
     font-size: 80px;
     color:  #010ea5;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold; 
+    position: absolute;
+    left: 20px;
  }
 .navbar .container-fluid{
     height: 100px;
@@ -74,23 +89,31 @@ header .container-fluid {
 }
 .navbar-toggler{
     border: 2px solid white;
+    right: 50px;
+    position: absolute;
 }
 .navbar ul{
     text-align:center
 }
 .main-concept{
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
     color: white;
-    margin-top: 170px;
-    font-size: 20px;
-    line-height: 2;
-    letter-spacing: 1.5px;
 }
 .main-concept p{
-    font-size: 30px;
-    margin-top: 120px;
+    position: absolute;
+    left: 87px;
+    letter-spacing: 2px;
+    width: 645px;
+    top: -22px;
+    text-align: left;
 }
+
+
 .d-flex .btn{
-    margin: auto;
+    right: 50px;
+    position: relative;
 }
 
 /************************ About Us ************************/
@@ -232,20 +255,28 @@ footer .contact-us a{
     }
 }
 @media (max-width:992px) {
+    .navbar-toggler{
+        right: 15%;
+    position: absolute;
+    }
+    .navbar-collapse,
+    .collapse,
     .collapse.show{
-        background-color: rgb(1, 14, 165);
+        position: absolute;
+        width: 40%;
+        top: 70px;
+        opacity: 0.9;
+        right: 20px;
+        background-color: rgb(92 92 95);
         z-index: 111;
-        border-radius: 10px;
     }
     header{
-        height: unset;
+        height:500px;
     }
-    .header-video{
-        height: inherit;
-    }
+    
     .header-container{
         height: 400px;
-    width: 75%;
+    width: 100%;
     }
     header .container-fluid {
         height: 1000px;
@@ -254,15 +285,20 @@ footer .contact-us a{
     }
     header .main-concept {
         position: absolute;
-        top: -30px;
+        top: 50%;
     }
     header .main-concept p{
         margin-top: 0;
-        font-size: 15px;
+        font-size: 30px;
         text-align: center;
     }
     .navbar .nav-link {
         margin-right: 0 !important;
+    }
+    .d-flex .btn{
+        position: relative;
+    width: 100%;
+    right: 0;
     }
     .about-us-text{
         text-align: center;
@@ -299,8 +335,12 @@ footer .contact-us a{
         margin: unset;
         height: unset;
     }
+    /*******************************************/
     #submit-btn-form{
     margin-bottom: 20px !important;
+    }
+    footer .contact-us{
+        border-right:unset ;
     }
     .visit-us,
     .all-rights-reserved{
@@ -309,4 +349,34 @@ footer .contact-us a{
     .footer-text{
         padding: 10px 13px;
     }
+}
+@media (max-width:750px) {
+    header {
+        height: 300px;
+    }
+   header .main-concept p{
+        position: absolute;
+        font-size: 20px !important;
+        letter-spacing: 2px;
+        width: 487px;
+        top: -52px;
+    }
+    footer .contact-us{
+        border-right:unset ;
+    }
+}
+@media(max-width:500px){
+    header {
+        height: 280px;
+    }
+    header .main-concept p{
+    position: absolute;
+        font-size: 15px !important;
+        letter-spacing: 2px;
+        width: 487px;
+        top: -52px;
+        left: 10px;}
+        footer .contact-us{
+            border-right:unset ;
+        }
 }

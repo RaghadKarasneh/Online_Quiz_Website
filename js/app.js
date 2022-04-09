@@ -32,8 +32,8 @@ this.correctPassword=checkPassword(this.password,this.spassword);
 
 if(this.firstName,this.lastName,this.correctEmail,this.correctPassword){
 
-}info.push(this);
-
+info.push(this);
+}
 LocalStorageFrom()
 console.log(this.fullName);
 
@@ -143,9 +143,3 @@ function handelSubmit(e){
 handelSubmit();
 
 /************************************************* */
-//When the user will click on Sign in button
-regFormx.addEventListener('button',handelSignIn);
-function handelSignIn(e){
-  
-
-}

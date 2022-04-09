@@ -9,39 +9,57 @@ html {
 
   /* *******Header******** */
 
-.navbar .navbar-brand{
-    font-size: 80px;
-    color:  #010ea5;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold; 
- }
-.navbar .container-fluid{
-    height: 100px;
-}
-.navbar .navbar-collapse ul{
-    margin: 10px auto;
-    color: black;
-    font-size: 25px;
-}
-.navbar .nav-link{
-    color: black;
-    margin-right: 30px;
-}
-.navbar .btn{
-    padding: 10px 30px;
-    background-color: #010ea5;
-    color:white
-}
-.navbar .btn .nav-link{
-    color:white;
-    margin-right: 0;
-}
-.navbar-toggler{
-    border: 2px solid #010ea5;
-}
-.navbar ul{
-    text-align:center
-}
+  .navbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    text-align: left;
+    float: left;
+    background-color: transparent;
+  }
+  .navbar .navbar-brand{
+      font-size: 80px;
+      color:  #010ea5;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold; 
+      position: absolute;
+      left: 20px;
+   }
+  .navbar .container-fluid{
+      height: 100px;
+  }
+  .navbar .navbar-collapse ul{
+      margin: 10px auto;
+      color: white;
+      font-size: 25px;
+  }
+  .navbar .nav-link{
+      color: white;
+      margin-right: 30px;
+  }
+  .navbar .btn{
+      padding: 10px 30px;
+      background-color: #010ea5;
+      color:white
+  }
+  .navbar .btn .nav-link{
+      color:white;
+      margin-right: 0;
+  }
+  .navbar-toggler{
+      border: 2px solid #010ea5;
+      right: 50px;
+      position: absolute;
+  }
+  .navbar ul{
+      text-align:center
+  }
+  .d-flex .btn{
+      right: 50px;
+      position: relative;
+  }
+  
 /* *********button********** */
 #nextButton{
     /*display: none;*/
@@ -51,7 +69,7 @@ html {
 
 
 #btn-next{
-    display: none;
+  
     background-color: #fd7e6d;
     height: 50px;
     width:50%;
@@ -152,10 +170,28 @@ footer .contact-us a{
 
 
 @media (max-width:992px) {
-    .collapse.show{
-        background-color: rgb(1, 14, 165);
+    .navbar-toggler{
+        right: 15%;
+    position: absolute;
+    }
+    .navbar-collapse,
+    .collapse,
+    .collapse .show{
+        position: absolute;
+        width: 40%;
+        top: 96px;
+        opacity: 0.9;
+        right: 20px;
+        background-color: #040477;
         z-index: 111;
-        border-radius: 10px;
+    }
+    .navbar .nav-link {
+        margin-right: 0 !important;
+    }
+    .d-flex .btn{
+        position: relative;
+    width: 100%;
+    right: 0;
     }
     #questionContainer  {
         height: 500px !important;
