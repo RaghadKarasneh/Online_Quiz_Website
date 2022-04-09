@@ -111,7 +111,7 @@ if(currentQuestion==htmlQuiz.length-2){
     nextButton.textContent='Submit'
 }
     if(currentQuestion==htmlQuiz.length-1){
-        document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
+      
         nextButton.href='../../htmlResult.html';
        
     }
