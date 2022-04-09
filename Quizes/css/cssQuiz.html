@@ -50,36 +50,37 @@
 
 <div class=" container  quiz-body">
   <div class="row">
-    <div id="questionContainer   "   class="col-lg-8">
+    <div id="questionContainer"  class="col-lg-8">
         <p id="questions">questions</p>
-        <div id="answersContainer">
-            <button id="answer1"  class="btn-answer-style">answer1</button>
+       
+            <input type="radio" id='input1' name="classes">
+            <label for='input1' id="answer1">answer1</label>
          <br>
-         <button id="answer2"  class="btn-answer-style">answer2</button>
+         <input type="radio" id='input2' name="classes">
+            <label for='input2' id="answer2">answer2</label>
         <br>
-        <button id="answer3"  class="btn-answer-style">answer3</button>
+        <input type="radio" id='input3' name="classes">
+        <label for='input3' id="answer3">answer3</label>
         <br>
-        </div>
-        <!--**Next button-->
+    
+        <!--**Submit button-->
         <span>Question:<span id="questionNumber"></span> of 10</span>
-        <button class="btn col-lg-2" type="submit" id="btn-next"><a id="nextButton">Submit</a></button>
+        <button class="btn col-lg-2" type="submit" id="btn-next" disabled onclick="showNextQuestion()"><a id="nextButton">Submit</a></button>
     </div>
     <!--**Timer-->
-      <div class="col-lg-4 counter-container">
-        <div class="counter"  class="timer" >
+    <div class="col-lg-4 col-md-12 col-sm-12 counter-container">
+      <div class="counter"  class="timer" >
         <div><span id="time">03:00</span> </div>
       </div>
     </div>
   </div>
 </div>
 
-
  <!--****************************************************************************************************************************************-->
 
  <div class="clearfix"></div>
 
  <!--****************************************************************************************************************************************-->
-
  <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
  <footer>
   <div class="container-fluid">
@@ -102,7 +103,7 @@
                   <h2>Visit Us</h2>
                   <div class="visit-us-info">
                     <p>Shafa Badran-near Applied university circle, Amman</p>
-                  <!---->>
+                  <p>Phone number: (06) 580 1100</p>
                   </div>
               </div>
               <!--** All rights reerved-->
