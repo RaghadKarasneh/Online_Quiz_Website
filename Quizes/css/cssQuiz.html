@@ -14,30 +14,12 @@
   
 </head>
 <body>
-      <!--Start Header which contains the navbar-->
-<header>
+  <header>
     <!--Start navbar-->
     <nav class="navbar navbar-expand-lg bg-transparent">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">OPQ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html #about-us">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html #why-us">Why Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-us">Contact Us</a>
-            </li>
-          </ul>
+       
           <form class="d-flex">
             <button class="btn" type="submit"><a class="nav-link" href="../../index.html">Log Out</a></button>
           </form>
@@ -50,70 +32,40 @@
 
 <div class=" container  quiz-body">
   <div class="row">
-    <div id="questionContainer"  class="col-lg-8">
+    <div id="questionContainer"   class="col-lg-8">
         <p id="questions">questions</p>
-       
-            <input type="radio" id='input1' name="classes">
-            <label for='input1' id="answer1">answer1</label>
-         <br>
-         <input type="radio" id='input2' name="classes">
-            <label for='input2' id="answer2">answer2</label>
-        <br>
+   
+        <input type="radio" id='input1' name="classes">
+        <label for='input1' id="answer1">answer1</label>
+     <br>
+        <input type="radio" id='input2' name="classes">
+        <label for='input2' id="answer2">answer2</label>
+    <br>
         <input type="radio" id='input3' name="classes">
         <label for='input3' id="answer3">answer3</label>
-        <br>
-    
-        <!--**Submit button-->
+    <br>
+        <!--**Next button-->
         <span>Question:<span id="questionNumber"></span> of 10</span>
         <button class="btn col-lg-2" type="submit" id="btn-next" disabled onclick="showNextQuestion()"><a id="nextButton">Next</a></button>
     </div>
     <!--**Timer-->
-    <div class="col-lg-4 col-md-12 col-sm-12 counter-container">
-      <div class="counter"  class="timer" >
+      <div class="col-lg-4 counter-container">
+        <div class="counter"  class="timer" >
         <div><span id="time">03:00</span> </div>
       </div>
     </div>
   </div>
 </div>
 
- <!--****************************************************************************************************************************************-->
+
+ <!--**********************************************-->
 
  <div class="clearfix"></div>
 
- <!--****************************************************************************************************************************************-->
- <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
- <footer>
-  <div class="container-fluid">
-      <div class="row footer-container">
-          <!--** Contact Us **-->
-          <div class="col-lg-4 col-md-4 col-6-12 contact-us text-center" id="contact-us">
-              <h2>Contact Us</h2>
-              <div class="icons">
-                <a href="https://www.linkedin.com/in/ghufran-almomani-777b93232/" target="_blank"><span class="fa fa-linkedin fa-3x"></span></a>
-                <a href="https://github.com/marwanseerat
-                " target="_blank"><span class="fa fa-github fa-3x"></span></a>
-                  <a href="mailto:raghad.karasneh@gmail.com"><span class="fa fa-envelope-open fa-3x"></span></a>
-              </div>
-          </div>
+ <!--**********************************************-->
 
-          <!--** Footer Text **-->
-          <div class="col-lg-8 col-md-8 col-6-12 footer-text">
-              <!--** Visit Us-->
-              <div class="visit-us">
-                  <h2>Visit Us</h2>
-                  <div class="visit-us-info">
-                    <p>Shafa Badran-near Applied university circle, Amman</p>
-                  <p>Phone number: (06) 580 1100</p>
-                  </div>
-              </div>
-              <!--** All rights reerved-->
-              <div class="all-rights-reserved">
-                  <p>All rights reserved for Orange © 2022</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</footer>
+ <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
+ 
 <!--End Footer-->
     </div>
     <script src="../../js/appCssQuiz.js"></script>

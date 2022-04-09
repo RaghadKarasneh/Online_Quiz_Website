@@ -16,21 +16,23 @@ function LocalStorageFrom(){
 }
 
 /*Regestration Constructor */
-function regForm(fname,lname,email,password,spassword,selectList){
+function regForm(fname,lname,femail,semail,password,spassword,selectList){
 
 this.fname=fname;
 this.lname=lname;
-this.email=email;
+this.femail=femail;
+this.semail=semail;
 this.password=password;
 this.spassword=spassword;
 this.selectList=selectList;
 console.log(this.selectList);
 this.firstName=userFirstName(this.fname);
 this.lastName=userLastName(this.lname);
-this.correctEmail=correctEmail(this.email);
+this.correctEmails=correctEmail(this.femail,this.semail);
+
 this.correctPassword=checkPassword(this.password,this.spassword);
 
-if(this.firstName,this.lastName,this.correctEmail,this.correctPassword){
+if(this.firstName,this.lastName,this.correctEmails,this.correctPassword){
 
 info.push(this);
 }
@@ -69,19 +71,27 @@ function userLastName(lname){
         return false;
     }
 }
-/*To check from the email */
-function correctEmail(email){
-    emailError.innerHTML='';
+/*To check from the femail */
+function correctEmail(femail,semail){
     let regex=/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!regex.test(email)){
-      emailError.style.display='block';
-      emailError.innerHTML= 'Incorrect Email!';
-      return false;
+
+if ((!regex.test(femail)) && (!regex.test(semail)))
+    {
+      femailError.innerHTML= 'Incorrect Email!';
+      return  false;
     }
     else{
-        emailError.style.display='none';
-        return true;
-    }
+        if (femail==semail){
+             console.log('Email has been confirmed');
+             emailError.innerHTML='Email has been confirmed';
+             return true;
+        }
+        else{
+            console.log(`Emails don't match`);
+            emailError.innerHTML=`Emails don't match`;
+            return true;
+        }
+    }   
   }
 
 /*To check from password */
@@ -99,7 +109,7 @@ function checkPassword(password,spassword){
         
     }
     else if((!capital.test(password[0])) && (!capital.test(spassword[0]))){ //To check from the first letter
-        console.log( 'Incorrect! first name must be capital.');
+        console.log( 'Incorrect! first name must be capital, password must contain 2 numbers at least, password must contain  at least 1 character');
         passwordError.style.display='block';
         passwordError.innerHTML= 'Incorrect! first name must be capital.';
         return false;
@@ -133,11 +143,12 @@ function handelSubmit(e){
     e.preventDefault();
     let fname=e.target.fname.value;
     let lname=e.target.lname.value;
-    let email=e.target.email.value;
+    let femail=e.target.femail.value;
+    let semail=e.target.semail.value;
     let password=e.target.password.value;
     let spassword=e.target.spassword.value;
     let selectList=e.target.selectList.value;
-    new regForm(fname,lname,email,password,spassword,selectList); //Calling the constructor
+    new regForm(fname,lname,femail,semail,password,spassword,selectList); //Calling the constructor
     regSubmitButton.href='./login.html';
 }
 handelSubmit();

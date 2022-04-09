@@ -1,384 +1,214 @@
-/*This style page is for home */
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing:border-box ;
-}
 body{
-    overflow-x: hidden;
-}
-html {
-    scroll-behavior: smooth;
+
+    background-color: #5e55a5!important;
+    z-index: 50 !important;
+    font-family: monospace;
+   
+  
+  
+  /* 
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzG7z-rwVMZvDV4VtM7PVUigYE55a2g8pypg&usqp=CAU");
+    background-position: 100%; */
   }
-hr{
-    background-color: #aca7a7;
-    box-sizing: content-box;
-    height: 0.5px;
-    overflow: visible;
-    width: 8%;
-    margin: 0 auto;
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    color: inherit;
-    border-top: 1px solid rgba(0,0,0,.1);
-    opacity: unset!important;
-}
-/************************ Header ************************/
-header{
-    height: 890px;
-}
-header .container-fluid {
-    margin: 0 !important;
-    padding: 0 !important;
-    position: absolute;
-    top: 0;
-
-}
-.header-container,
-.header-video,
-.header-video video{
-  width:100% ;
-}
-.header-video
-{
-  opacity: 0.6;
-  z-index: -1;
-}
-.header-container{
-    position: absolute;
-    top:0px;
-}
-/***** Navbar ****/
-.navbar{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 150px;
-  text-align: left;
-  float: left;
-  background-color: transparent;
-}
-.navbar .navbar-brand{
-    font-size: 80px;
-    color:  #010ea5;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold; 
-    position: absolute;
-    left: 20px;
- }
-.navbar .container-fluid{
-    height: 100px;
-}
-.navbar .navbar-collapse ul{
-    margin: 10px auto;
-    color: white;
-    font-size: 25px;
-}
-.navbar .nav-link{
-    color: white;
-    margin-right: 30px;
-}
-.navbar .btn{
-    padding: 10px 30px;
-    background-color: #010ea5;
-    color:white
-}
-.navbar .btn .nav-link{
-    color:white;
-    margin-right: 0;
-}
-.navbar-toggler{
-    border: 2px solid white;
-    right: 50px;
-    position: absolute;
-}
-.navbar ul{
-    text-align:center
-}
-.main-concept{
-    position: absolute;
-    top: 50%;
-    font-size: 30px;
-    color: white;
-}
-.main-concept p{
-    position: absolute;
-    left: 87px;
-    letter-spacing: 2px;
-    width: 645px;
-    top: -22px;
-    text-align: left;
-}
-
-
-.d-flex .btn{
-    right: 50px;
-    position: relative;
-}
-
-/************************ About Us ************************/
-.about-us{
-    margin-top: 20px;
-}
-.about-us hr{
-    width: 12%;
-    margin: 0 40px;
-}
-.about-us .about-us-text{
-    padding-top: 60px;
-}
-.about-us img{
-    float: right;
-}
-/*********************** Why Us *************************/
-.why-us{
-    margin-top: 20px;
-    margin-bottom: 100px;
-
-}
-.why-us-container{
-    margin-left: 90px;
-    margin-top: 90px;
-    height: 400px;
-}
-.why-us .card{
-    margin-right: 57px;
-    text-align: center;
-    height: 300px;
-    box-shadow: 10px 10px 10px #969393;
-}
-.why-us .first-card,
-.why-us .third-card{
-    background-color: #db8ac2;
-}
-.why-us .second-card {
-    position: relative;
-    top: 70px;
-    background-color: #040477;
-}
-/*********************** reg-form ***********************/
-.reg-form{
-    margin-bottom: 200px;
-}
-.form-container{
-    margin-top: 70px;
-}
-.form-structure{
-    border: 1px solid gray;
-    box-shadow: 10px 10px 15px #969393;
-    padding: 30px;
-}
-.form-description{
-    margin-top: 250px;
-    padding-left: 70px;
-}
-.error-msg{
-    width: 100%;
-    background-color: #fdd2cfbd;
+  
+  
+  
+  .regForm{background-color:white;
+      width: 50%;
+      border-radius:25px;
+      /* font-size:20px; */
+      margin-left:25%;
+      margin-top:8%;
+      /* height: 50%;  */
+      padding: 50px 0;
+      box-shadow: 10px 20px 50px white;
+      margin-bottom: 50px;
+   
+  } 
+  
+  #signupform{
+  padding-left:10%;
+  }
+  
+  input{
     border-radius: 10px;
-    margin-bottom: 10px;
-    color: red;
-    font-size: 20px;
-    padding: 7px 15px;
-}
-#error-name,
-#error-email,
-#error-password{
-    display: none;
-}
-.reg-form .btn .nav-link{
-    color:white;
-    margin-right: 0;
-}
-
-/*The hidden Form*/
-#regs_form-hidden{
-    display: none;
-}
-#submit-btn-form,
-#sign-in{
-    border-radius: 20px;
-    margin-right: 20px;
-}
-#positionSelect{
-    padding: 5px !important;
-    border: 5px double gray !important;
-}
-/************************* Footer ***********************/
-footer{
-    background-color: #040477;
-    color: white;
-}
-footer .container-fluid{
-    height: 100%;
-}
-.footer-container{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-footer .contact-us{
-    border-right: 1px solid white;
-    padding: 20px;
-}
-footer .contact-us a{
-    color: white;
-    text-decoration: none;
-}
-.contact-us .icons span{
+    border-color: #5e55a5;}
+  
+  
+  .dvimg{
+    
+  background-image:url('../media/5d1ccdc16221bb0c7013fe999c099aaa.jfif') ;
+  background-repeat:  no-repeat;
+  background-size: contain;
+  background-position: 40%;
+  position: absolute;
+  top: 25%;
+  left: 48%;
+  border-radius: 10px;
+  border-top-left-radius:0 ;
+  border-bottom-left-radius:0 ;
+  width:25%;
+  height:69.3%;
+  
+  }
+  
+  select {
+    border-radius: 8px;
+    border-color: #5e55a5;
+    font-weight: bold;
+    background-color: #f9fafb;
+    padding: 8px 5px;
     display: block;
-    margin: 15px;
     cursor: pointer;
-}
-.footer-text{
-    padding-left: 0;
-}
-.footer-text .visit-us{
-    border-bottom: 1px solid;
-    padding: 23px 20px;
-    height: 225px;
-}
-.footer-text .visit-us-info{
-    padding: 50px 0px;
-}
-.footer-text .all-rights-reserved{
-    padding: 20px 20px 0 20px;
-}
-
-
-#nextButton{
+  }
+  
+  #submit-btn-form,
+  #sign-in{
+      margin: 20px 0;
+      display: inline-block;
+      background-color: #5e55a5;
+  }
+  
+  
+    
+  #submit-btn-form a,
+  #sign-in a{
+      text-decoration: none;
+      color: white;
+  }
+  
+  button {
+  display: inline-block;
+  background-color: #5e55a5;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 15px;
+   margin-left:8px;
+  }
+  
+  button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  }
+  
+  button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+  }
+  
+  button:hover span {
+  padding-right: 15px;
+  }
+  
+  button:hover span:after {
+  opacity: 1;
+  right: 0;
+  }
+  button a{
+      text-decoration: none;
+      color: white;
+  }
+  .form-control,
+  .form-select{
+      width: 90%;
+  }
+  .error-msg{
+      color: red;
+  }
+  @media (max-width:992px)
+  {
+    .dvimg{
+        display: none;
+      } 
+  }
+  @media (max-width:658px) {
+    .regForm{background-color:white;
+      width: 75%;
+      border-radius:25px;
+      margin-left:15%;
+  }
+  .dvimg{
     display: none;
-}
-@media (max-width:1420px){
-    .why-us{
-        height: 720px;
+  }
+  
+  
+  select{
+    margin-bottom: 10px;
+  }
+  
+  
+  }
+  
+  @media (max-width:768px){
+    .dvimg{
+      display: none;
     }
-}
-@media (max-width:992px) {
-    .navbar-toggler{
-        right: 15%;
-    position: absolute;
-    }
-    .navbar-collapse,
-    .collapse,
-    .collapse.show{
-        position: absolute;
-        width: 40%;
-        top: 70px;
-        opacity: 0.9;
-        right: 20px;
-        background-color: rgb(92 92 95);
-        z-index: 111;
-    }
-    header{
-        height:500px;
-    }
+  
+    input{
+      width: 70%;
+      border-radius: 10px;
+      border-color: #5e55a5;}
+  
+  }
+  
+  @media (max-width:1024px){
+    .dvimg{
     
-    .header-container{
-        height: 400px;
-    width: 100%;
+      background-image:url("'../media/5d1ccdc16221bb0c7013fe999c099aaa.jfif'") ;
+      background-repeat:  no-repeat;
+      background-size: contain;
+      background-position: 40%;
+      position: absolute;
+      top:17%;
+      left:50%;
+      
+      
+      }
+  }
+  @media (max-width:1300px){
+    .dvimg{
+      background-image:url('../media/5d1ccdc16221bb0c7013fe999c099aaa.jfif') ;
+      background-repeat:  no-repeat;
+      background-size: contain;
+      background-position: 40%;
+      position: absolute;
+      top:18%;
+      left:45%;
+     
     }
-    header .container-fluid {
-        height: 1000px;
-        position: absolute;
-        top: 0;
-    }
-    header .main-concept {
-        position: absolute;
-        top: 50%;
-    }
-    header .main-concept p{
-        margin-top: 0;
-        font-size: 30px;
-        text-align: center;
-    }
-    .navbar .nav-link {
-        margin-right: 0 !important;
-    }
-    .d-flex .btn{
-        position: relative;
-    width: 100%;
-    right: 0;
-    }
-    .about-us-text{
-        text-align: center;
-    }
-    .about-us-text hr{
-        margin: auto;
-    }
-    .about-us-img img{
-        float: unset;
-        margin: 20px auto;
-        text-align: center;
-        left: 25%;
-        position: relative;
-    }
-    .card{
-        margin: auto;
-    }
-    .why-us{
-        height: unset!important;
-    }
-    .why-us .first-card,
-    .why-us .second-card,
-    .why-us .third-card{
-        margin: auto;
-    }
-    .why-us .second-card{
-        position: relative;
-        top: 0px
-    }
-    .why-us hr{
-        margin-bottom: 40px !important;
-    }
-    .why-us-container{
-        margin: unset;
-        height: unset;
-    }
-
-    
-    /*******************************************/
-    #submit-btn-form{
-    margin-bottom: 20px !important;
-    }
-    footer .contact-us{
-        border-right:unset ;
-    }
-    .visit-us,
-    .all-rights-reserved{
-        text-align: center;
-    }
-    .footer-text{
-        padding: 10px 13px;
-    }
-}
-@media (max-width:750px) {
-    header {
-        height: 300px;
-    }
-   header .main-concept p{
-        position: absolute;
-        font-size: 20px !important;
-        letter-spacing: 2px;
-        width: 487px;
-        top: -52px;
-    }
-    footer .contact-us{
-        border-right:unset ;
-    }
-}
-@media(max-width:500px){
-    header {
-        height: 280px;
-    }
-    header .main-concept p{
-    position: absolute;
-        font-size: 15px !important;
-        letter-spacing: 2px;
-        width: 487px;
-        top: -52px;
-        left: 10px;}
-        footer .contact-us{
-            border-right:unset ;
-        }
-}
+  }
+  @media (max-width:1024px){
+    .dvimg{
+    top:40%;}
+  }
+  @media (min-width:320px){
+    input{
+      width: 80%;
+      border-radius: 10px;
+      border-color: #5e55a5;}
+  
+      button{
+        display: block;
+        margin:10px auto;
+      }
+  }
+  @media (max-width:320px){
+ 
+      button{
+       width:93px;
+        margin:10px auto;
+      }
+  }

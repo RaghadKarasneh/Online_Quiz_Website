@@ -7,70 +7,52 @@ html {
     scroll-behavior: smooth;
   }
 
-  /* *******Header******** */
+  /* **Header*** */
 
-  .navbar{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 150px;
-    text-align: left;
-    float: left;
-    background-color: transparent;
-  }
-  .navbar .navbar-brand{
-      font-size: 80px;
-      color:  #010ea5;
-      font-family: 'Courier New', Courier, monospace;
-      font-weight: bold; 
-      position: absolute;
-      left: 20px;
-   }
-  .navbar .container-fluid{
-      height: 100px;
-  }
-  .navbar .navbar-collapse ul{
-      margin: 10px auto;
-      color: white;
-      font-size: 25px;
-  }
-  .navbar .nav-link{
-      color: white;
-      margin-right: 30px;
-  }
-  .navbar .btn{
-      padding: 10px 30px;
-      background-color: #010ea5;
-      color:white
-  }
-  .navbar .btn .nav-link{
-      color:white;
-      margin-right: 0;
-  }
-  .navbar-toggler{
-      border: 2px solid #010ea5;
-      right: 50px;
-      position: absolute;
-  }
-  .navbar ul{
-      text-align:center
-  }
-  .d-flex .btn{
-      right: 50px;
-      position: relative;
-  }
-  
-/* *********button********** */
+.navbar .navbar-brand{
+    font-size: 80px;
+    color:  #5e55a5;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; 
+ }
+.navbar .container-fluid{
+    height: 100px;
+}
+.navbar .navbar-collapse ul{
+    margin: 10px auto;
+    color: black;
+    font-size: 25px;
+}
+.navbar .nav-link{
+    color: black;
+    margin-right: 30px;
+}
+.navbar .btn{
+    padding: 10px 30px;
+    background-color:#5e55a5;
+    color:white
+}
+.navbar .btn .nav-link{
+    color:white;
+    margin-right: 0;
+}
+.navbar-toggler{
+    border: 2px solid #5e55a5;
+}
+.navbar ul{
+    text-align:center
+}
+/* ****button*** */
 #nextButton{
-    /*display: none;*/
+   
     text-decoration: none;
     color:white; 
 }
 
 
 #btn-next{
-  
-    background-color: #fd7e6d;
+
+    background-color: #5e55a5;
     height: 50px;
     width:50%;
     margin-top: 50px;
@@ -88,23 +70,24 @@ html {
         background-color: white;
         height: 60px;
         margin-top: 50px;
-        border: 8px solid #fd7e6d;
+        border: 8px solid #5e55a5;
         transition: 0.5s ease-in-out;
         width: 300px;
         cursor: pointer;
 }
 .btn-answer-style:hover{
-    background-color: #fd7e6d;
+    background-color: #5e55a5;
     color: white;
 }
-/* ********p(question)********** */
+/* ***p(question)*** */
 #questions{
     font-size: larger;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 50px;
     /* font-weight: bold; */
 }
 
-/* **********Timer countdown************ */
+/* ***Timer countdown***** */
 .counter{
     font-size:xx-large;
     font-weight: bold;
@@ -114,7 +97,7 @@ html {
     text-align: center;
     padding-top: 70px;
     float: right;
-    border: 12px double  rgb(47, 58, 143);
+    border: 12px double  #5e55a5;
 }
 span{
     position: relative;
@@ -127,79 +110,21 @@ span{
     position: unset;
     top:unset
 }
-/* *******footer******** */
-footer{
-    background-color: #040477;
-    color: white;
-}
-footer .container-fluid{
-    height: 100%;
-}
-.footer-container{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-footer .contact-us{
-    border-right: 1px solid white;
-    padding: 20px;
-}
-footer .contact-us a{
-    color: white;
-    text-decoration: none;
-}
-.contact-us .icons span{
-    display: block;
-    margin: 15px;
-    cursor: pointer;
-}
-.footer-text{
-    padding-left: 0;
-}
-.footer-text .visit-us{
-    border-bottom: 1px solid;
-    padding: 23px 20px;
-    height: 225px;
-}
-.footer-text .visit-us-info{
-    padding: 50px 0px;
-}
-.footer-text .all-rights-reserved{
-    padding: 20px 20px 0 20px;
-}
+
 
 
 @media (max-width:992px) {
-    .navbar-toggler{
-        right: 15%;
-    position: absolute;
-    }
-    .navbar-collapse,
-    .collapse,
-    .collapse .show{
-        position: absolute;
-        width: 40%;
-        top: 96px;
-        opacity: 0.9;
-        right: 20px;
-        background-color: #040477;
+    .collapse.show{
+        background-color: #5e55a5;
         z-index: 111;
+        border-radius: 10px;
     }
-    .navbar .nav-link {
-        margin-right: 0 !important;
-    }
-    .d-flex .btn{
-        position: relative;
-    width: 100%;
-    right: 0;
-    }
-    #questionContainer  {
-        height: 500px !important;
-    }
+  
     #btn-next{
         margin: 50px auto;
         position: relative;
         left: unset;
+        display: block
     }
     #contact-us{
         border-right:unset;

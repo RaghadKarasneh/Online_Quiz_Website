@@ -94,7 +94,7 @@ for (let i=0;i<correctQuizAnswers.length;i++){
     td5.innerHTML ="true";
     correctAnswers=correctAnswers+1;
     console.log(correctAnswers);
-    td5.style.color='green';
+    td5.style.color='#75d375';
     
     }
     else{

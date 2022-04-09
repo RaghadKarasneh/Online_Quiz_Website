@@ -3,20 +3,17 @@ let questionBody= document.getElementById("questions"); //Qustion title
 let answerOne= document.getElementById("answer1");
 let answerTwo= document.getElementById("answer2");
 let answerThree= document.getElementById("answer3");
-let input1=document.getElementById('input1');
-let input2=document.getElementById('input2');
-let input3=document.getElementById('input3');
 let answersContainer=document.getElementById('answersContainer');//quiz form
 let questionNumber=document.getElementById('questionNumber');
 let currentQuestion=0;
 let quizContainer=document.getElementById("questionContainer");
 let nextButton=document.getElementById('nextButton');
-let =document.getElementById('btn-next');
 let correctAnswerCount=0;
 let choosedAnswer=0;
-let userQuizAnsweenableNextButtonrs=[];
+let userQuizAnswers=[];
+let enableNextButton=document.getElementById('btn-next');
 let x=[];
-let disableButton=0;
+
 
 /*Array of object that conatin: questions, answers, and the correct answer */
 
@@ -110,7 +107,7 @@ function quizBeginning(){
 }
 
 function showNextQuestion(){
-    if(currentQuestion==htmlQuiz.length-2){
+    if(currentQuestion==jsQuiz.length-2){
         nextButton.textContent='Submit'
     }
     if(currentQuestion==jsQuiz.length-1){

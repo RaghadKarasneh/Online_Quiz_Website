@@ -11,142 +11,92 @@
     <title>Result page</title>
 </head>
 <body>
-    <!--Start Header which contains the navbar-->
-  
-    <header>
-        <!--*Start navbar*-->
-        <nav class="navbar navbar-expand-lg bg-transparent">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">OPQ</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html #about-us">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html #why-us">Why Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contact-us">Contact Us</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <button class="btn" type="submit"><a class="nav-link" href="index.html">Log Out</a></button>
-                </form>
-              </div>
-            </div>
-          </nav>
-          <!--*End navbar*-->
-    </header>
-    <!--End Header-->
-
-    <!--**********************************************-->
     
-    <div class="clearfix"></div>
-
-    <!--**********************************************-->
-    
-    <!--Start Websit body which contains: Welcoming section, and Let's start the quiz button -->
-
-    <main>
-      <div class="container">
-        <video src="./media/Firework.mp4" autoplay loop muted type="mp" id="video"></video>
-          <article>
-            <h2 class="text-center" id="finalResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-
-              <div class="result text-center row">
-                    
-                      <!--**Start Result text-->
-                      <div class="col-lg-12 result-text text-center" >
-                          <p id="result-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam sequi ipsa, tenetur atque explicabo odio sint aspernatur, architecto iusto quaerat beatae consequuntur voluptate distinctio dolor totam cum fugiat magni quas?</p>
-                          <button class="btn col-lg-6" type="button" onclick="showtable()">Show Answers</button>
-                      </div>
-                   
-           </div>
-            
-           <div class="result text-center row">      <!--**Start Result table-->
-                      <div class="col-lg-12 result-table" id="htmltable" >
-                          <table class="table table-dark ">
-                              <thead>
-                     
-             
-                  
-                        <!--**Start Result table-->
-                        <div class="col-lg-5 col-sm-12 col-md-12  result-table" id="htmltable" >
-                            <table class="table table-dark ">
-                                <thead>
-                                 
-                                    
-                                  <th scope="col">Quiz Number</th>
-                                  <th scope="col" id="questionTh">The question</th>
-                                  <th scope="col" id="correctAnswerTh">The correct answer</th>
-                                  <th scope="col" id="userAnswerTh">You answer</th>
-                                  <th scope="col" id="resultTd">Result</th>
-                              
-                                  
-                                </thead>
-                                <tbody id="tablebody">
-                                  <!--The rows will be shown here-->
-                                </tbody>
-                              </table>
-                        </div>
-                        <!--**End Result table-->
-                   </div>
-            </article>
-        </div>
-    </main>
-    <!--End Websit body(main section)-->
-
-     <!--*********************************************-->
-  
-    <div class="clearfix"></div>
-
-    <!--**********************************************-->
-
-     <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
-     <footer>
-      <div class="container-fluid">
-          <div class="row footer-container">
-              <!--** Contact Us **-->
-              <div class="col-lg-4 col-md-4 col-6-12 contact-us text-center" id="contact-us">
-                  <h2>Contact Us</h2>
-                  <div class="icons">
-                    <a href="https://www.linkedin.com/in/ghufran-almomani-777b93232/" target="_blank"><span class="fa fa-linkedin fa-3x"></span></a>
-                    <a href="https://github.com/marwanseerat
-                    " target="_blank"><span class="fa fa-github fa-3x"></span></a>
-                      <a href="mailto:raghad.karasneh@gmail.com"><span class="fa fa-envelope-open fa-3x"></span></a>
-                  </div>
-              </div>
-  
-              <!--** Footer Text **-->
-              <div class="col-lg-8 col-md-8 col-6-12 footer-text">
-                  <!--** Visit Us-->
-                  <div class="visit-us">
-                      <h2>Visit Us</h2>
-                      <div class="visit-us-info">
-                        <p>Shafa Badran-near Applied university circle, Amman</p>
-                      <p>Phone number: (06) 580 1100</p>
-                      </div>
-                  </div>
-                  <!--** All rights reerved-->
-                  <div class="all-rights-reserved">
-                      <p>All rights reserved for Orange © 2022</p>
-                  </div>
-              </div>
+  <header>
+    <!--Start navbar-->
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">OPQ</a>
+            <form class="d-flex">
+              <button class="btn" type="submit"><a class="nav-link" href="index.html">Log Out</a></button>
+            </form>
           </div>
-      </div>
-  </footer>
-    <!--End Footer-->
+        </div>
+      </nav>
+      <!--End navbar-->
+</header>
+<!--End Header-->
 
-    <!--**********************************************-->
+<!--****************-->
 
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
+
+<!--****************-->
+
+<!--Start Websit body which contains: Welcoming section, and Let's start the quiz button -->
+
+<main>
+  <div class="container">
+    <video src="./media/Firework.mp4" autoplay loop muted type="mp" id="video"></video>
+      <article>
+        <h2 class="text-center" id="finalResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+
+          <div class="result text-center row">
+                
+                  <!--**Start Result text-->
+                  <div class="col-lg-12 result-text text-center" >
+                      <p id="result-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam sequi ipsa, tenetur atque explicabo odio sint aspernatur, architecto iusto quaerat beatae consequuntur voluptate distinctio dolor totam cum fugiat magni quas?</p>
+                      <button class="btn col-lg-6" type="button" onclick="showtable()">Show Answers</button>
+                  </div>
+               
+       </div>
+        
+       <div class="result text-center row">      <!--**Start Result table-->
+                  <div class="col-lg-12 result-table" id="htmltable" >
+                      <table class="table table-dark ">
+                          <thead>
+                 
+         
+              
+                    <!--**Start Result table-->
+                    <div class="col-lg-5 col-sm-12 col-md-12  result-table" id="htmltable" >
+                        <table class="table table-dark ">
+                            <thead>
+                             
+                                
+                              <th scope="col">Question Number</th>
+                              <th scope="col" id="questionTh">The question</th>
+                              <th scope="col" id="correctAnswerTh">The correct answer</th>
+                              <th scope="col" id="userAnswerTh">You answer</th>
+                              <th scope="col" id="resultTd">Result</th>
+                          
+                              
+                            </thead>
+                            <tbody id="tablebody">
+                              <!--The rows will be shown here-->
+                            </tbody>
+                          </table>
+                    </div>
+                    <!--**End Result table-->
+               </div>
+        </article>
+    </div>
+</main>
+<!--End Websit body(main section)-->
+
+ <!--***************-->
+
+<div class="clearfix"></div>
+
+<!--****************-->
+
+ <!--Start Footer which contains: Contact-us section, location, and all-rights-reserved section-->
+
+<!--End Footer-->
+
+<!--****************-->
+
+<div class="clearfix"></div>
     <script src="./js/jsResult.js"></script>
     <!--**********************************************-->
 </body>

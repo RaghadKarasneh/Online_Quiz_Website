@@ -118,7 +118,7 @@ let cssQuiz=[
     }
     
     function showNextQuestion(){
-        if(currentQuestion==htmlQuiz.length-2){
+        if(currentQuestion==cssQuiz.length-2){
             nextButton.textContent='Submit'
         }
         if(currentQuestion==cssQuiz.length-1){
