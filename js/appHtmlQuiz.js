@@ -105,21 +105,15 @@ function quizBeginning(){
     enableNextButton.disabled=true
 }
 
-function checkAnswer(userAnswer){
-    if(userAnswer == htmlQuiz[currentQuestion].correctAnswer){ //To check the correct answer by comparing it with the answer in the htmlQuiz array
-        correctAnswerCount=correctAnswerCount+1; // calculate the correct answers
-        console.log('the counter is:', correctAnswerCount);
-    }
-    //getUserAnswers();
-    ; /*we call this function to move for the next question */
-    return correctAnswerCount;
-}
 
 function showNextQuestion(){
+if(currentQuestion==htmlQuiz.length-2){
+    nextButton.textContent='Submit'
+}
     if(currentQuestion==htmlQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
         nextButton.href='../../htmlResult.html';
-        nextButton.textContent='Submit'
+       
     }
     else{
         

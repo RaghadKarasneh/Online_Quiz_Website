@@ -11,10 +11,10 @@ let questionNumber=document.getElementById('questionNumber');
 let currentQuestion=0;
 let quizContainer=document.getElementById("questionContainer");
 let nextButton=document.getElementById('nextButton');
-let enableNextButton=document.getElementById('btn-next');
+let =document.getElementById('btn-next');
 let correctAnswerCount=0;
 let choosedAnswer=0;
-let userQuizAnswers=[];
+let userQuizAnsweenableNextButtonrs=[];
 let x=[];
 let disableButton=0;
 
@@ -109,21 +109,13 @@ function quizBeginning(){
     enableNextButton.disabled=true
 }
 
-function checkAnswer(userAnswer){
-    if(userAnswer == jsQuiz[currentQuestion].correctAnswer){ //To check the correct answer by comparing it with the answer in the jsQuiz array
-        correctAnswerCount=correctAnswerCount+1; // calculate the correct answers
-        console.log('the counter is:', correctAnswerCount);
-    }
-    //getUserAnswers();
-    ; /*we call this function to move for the next question */
-    return correctAnswerCount;
-}
-
 function showNextQuestion(){
+    if(currentQuestion==htmlQuiz.length-2){
+        nextButton.textContent='Submit'
+    }
     if(currentQuestion==jsQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
         nextButton.href='../../jsResult.html';
-        nextButton.innerHTML='Submit'
     }
     else{
         
