@@ -25,11 +25,15 @@ function GetHtmlDataFromLocalStorage(){//to recive the locale storage value
     let storageDataAnswers=localStorage.getItem('userHtmlQuizAnswers'); // for user answers
     let parseDataAnswers=JSON.parse(storageDataAnswers);
 
-    renderInformation(parseData,parseDataAnswers,userinfo);
+     /* To get the quiz array*/
+     let storageQuizArray=localStorage.getItem('htmlArray'); // for user answers
+     let parsehtmlArray=JSON.parse(storageQuizArray);
+
+    renderInformation(parseData,parseDataAnswers,userinfo,parsehtmlArray);
 }
 GetHtmlDataFromLocalStorage();
 
-function renderInformation(parseData,parseDataAnswers,userinfo){
+function renderInformation(parseData,parseDataAnswers,userinfo,parsehtmlArray){
 
     let correctQuizAnswers=[1,1,1,3,3,2,3,2,2,2]; //The correct Html quiz answers
     let question=[
@@ -56,63 +60,69 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         `< a href= “”>Geeksforgeeks< /a>`,
         `6`
     ]
-    for (let i=0;i<correctQuizAnswers.length;i++){
-        /*To add a row and cells with the questions number and true ot false value depends on the user answers */
-      let tr=document.createElement('tr');
-      let td1=document.createElement('td');
-      let td2=document.createElement('td');
-      let td3=document.createElement('td');
-      let td4=document.createElement('td');
-      tableBody.appendChild(tr);
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      tr.appendChild(td3);
-      tr.appendChild(td4);
-      td4.innerHTML='false';
-      if(parseDataAnswers&&parseDataAnswers.length){ //When the time will finish without answering any question
-          console.log('not empty');
-      }else{
-          console.log('empty');
-          parseDataAnswers=[0,0,0,0,0,0,0,0,0,0];
-      }
-      /*To check if user's answers are correct or not and to some actions in  */
-      if(parseDataAnswers[i]==correctQuizAnswers[i]){
-        console.log(td1);
-        console.log(td2);
-        td1.innerHTML = i+1;
-        td2.innerHTML=question[i];
-        td3.innerHTML=anwers[i]
-        td4.textContent ="true";
-        correctAnswers=correctAnswers+1;
-        console.log(correctAnswers);
-        td4.style.color='green';
-        
-        }
-        else{
-        td1.innerHTML = i+1;
-        td2.innerHTML=question[i];
-        td3.innerHTML=anwers[i]
-        td4.innerHTML ="false";
-        wrongAnswers=i+1;
-        
-        td4.style.color='red';
 
-    }
-
-}//Dear ${userinfo[0].fname}  ${userinfo[0].lname}
-    if(correctAnswers>=5){
-        finalResult.innerHTML='Congratulations, you did it!';
-        finalResult.style.color = "#29c429";
+for (let i=0;i<correctQuizAnswers.length;i++){
+  
+    /*To add a row and cells with the questions number and true ot false value depends on the user answers */
+  let tr=document.createElement('tr');
+  let td1=document.createElement('td');
+  let td2=document.createElement('td');
+  let td3=document.createElement('td');
+  let td4=document.createElement('td');
+  let td5=document.createElement('td');
+  tableBody.appendChild(tr);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  tr.appendChild(td4);
+  tr.appendChild(td5);
+  td4.innerHTML='false';
+  if(parseDataAnswers&&parseDataAnswers.length){ //When the time will finish without answering any question
+      console.log('not empty');
+  }else{
+      console.log('empty');
+      parseDataAnswers=[0,0,0,0,0,0,0,0,0,0];
+  }
+  /*To check if user's answers are correct or not and to some actions in  */
+  if(parseDataAnswers[i]==correctQuizAnswers[i]){
+    console.log(td1);
+    console.log(td2);
+    td1.innerHTML = i+1;
+    td2.innerHTML=question[i];
+    td3.innerHTML=anwers[i]
+    td4.innerHTML=parsehtmlArray[i].choises[parseDataAnswers[i]-1];
+    td5.innerHTML ="true";
+    correctAnswers=correctAnswers+1;
+    console.log(correctAnswers);
+    td5.style.color='green';
+    
     }
     else{
-        finalResult.innerHTML=`Unfortunately you didn't pass, please try agian.`;
-        finalResult.style.color = "#f22929";
-        videoCongrats.style.display='none';
-    }
-    resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 10, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${10-correctAnswers}.`;
+    td1.innerHTML = i+1;
+    td2.innerHTML=question[i];
+    td3.innerHTML=anwers[i];
+    td4.innerHTML=parsehtmlArray[i].choises[parseDataAnswers[i]-1];
+    td5.innerHTML ="false";
+    wrongAnswers=i+1;
+    
+    td5.style.color='red';
+
+}
+
+}//Dear ${userinfo[0].fname}  ${userinfo[0].lname}
+if(correctAnswers>=5){
+    finalResult.innerHTML='Congratulations, you did it!';
+    finalResult.style.color = "#29c429";
+}
+else{
+    finalResult.innerHTML=`Unfortunately you didn't pass, please try agian.`;
+    finalResult.style.color = "#f22929";
+    videoCongrats.style.display='none';
+}
+resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 10, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${10-correctAnswers}.`;
 }
 
 /*To show the table after clicking the show answers button */
 function showtable() {
-    document.getElementById("htmltable").style.display = 'block';
+document.getElementById("htmltable").style.display = 'block';
 }

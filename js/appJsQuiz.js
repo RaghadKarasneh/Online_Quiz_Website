@@ -123,6 +123,7 @@ function showNextQuestion(){
     if(currentQuestion==jsQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
         nextButton.href='../../jsResult.html';
+        nextButton.innerHTML='Submit'
     }
     else{
         
@@ -175,7 +176,9 @@ function LocalStorageFrom(){
     let array=JSON.stringify(correctAnswerCount); // to send the Answer counter value to result page
     localStorage.setItem('userAnswers',array);
     let array2=JSON.stringify(userQuizAnswers); // to send the answers options number that the user chose to result page
-    localStorage.setItem('userQuizAnswers',array2)
+    localStorage.setItem('userQuizAnswers',array2);
+    let array3=JSON.stringify(jsQuiz);
+    localStorage.setItem('jsArray',array3)
 }
 /*Timer: 3 minutes */
 function startTimer(duration, view_date) {

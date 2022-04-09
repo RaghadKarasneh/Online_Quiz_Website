@@ -119,6 +119,7 @@ function showNextQuestion(){
     if(currentQuestion==htmlQuiz.length-1){
         document.getElementById('btn-next').style.display='block'; // to show the next button that will take me to result page after answering the last question
         nextButton.href='../../htmlResult.html';
+        nextButton.textContent='Submit'
     }
     else{
         
@@ -170,7 +171,9 @@ function LocalStorageFrom(){
     let array=JSON.stringify(correctAnswerCount); // to send the Answer counter value to result page
     localStorage.setItem('userHtmlAnswers',array);
     let array2=JSON.stringify(userQuizAnswers); // to send the answers options number that the user chose to result page
-    localStorage.setItem('userHtmlQuizAnswers',array2)
+    localStorage.setItem('userHtmlQuizAnswers',array2);
+    let array3=JSON.stringify(htmlQuiz);
+    localStorage.setItem('htmlArray',array3)
 }
 /*Timer: 3 minutes */
 function startTimer(duration, view_date) {
@@ -191,7 +194,7 @@ function startTimer(duration, view_date) {
 }
 
 window.onload = function () {
-   let minutesOfFive =5,
+   let minutesOfFive =60*3,
         view_date = document.querySelector('#time');
     startTimer(minutesOfFive, view_date);
 };

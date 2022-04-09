@@ -25,11 +25,14 @@ function GetCssDataFromLocalStorage(){//to recive the locale storage value
     let storageDataAnswers=localStorage.getItem('userCssQuizAnswers'); // for user answers
     let parseDataAnswers=JSON.parse(storageDataAnswers);
 
-    renderInformation(parseData,parseDataAnswers,userinfo);
+     /* To get the quiz array*/
+     let storageQuizArray=localStorage.getItem('cssArray'); // for user answers
+     let parseCssArray=JSON.parse(storageQuizArray);
+    renderInformation(parseData,parseDataAnswers,userinfo,parseCssArray);
 }
 GetCssDataFromLocalStorage();
 
-function renderInformation(parseData,parseDataAnswers,userinfo){
+function renderInformation(parseData,parseDataAnswers,userinfo,parseCssArray){
 
     let correctQuizAnswers=[1,1,1,1,1,2,3,1,2,3] ; //The correct Html quiz answers
     let question=[
@@ -57,17 +60,20 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         `object-fit`
     ];
     for (let i=0;i<correctQuizAnswers.length;i++){
+        console.log(parseCssArray[i].choises[parseDataAnswers[i]]);
         /*To add a row and cells with the questions number and true ot false value depends on the user answers */
       let tr=document.createElement('tr');
       let td1=document.createElement('td');
       let td2=document.createElement('td');
       let td3=document.createElement('td');
       let td4=document.createElement('td');
+      let td5=document.createElement('td');
       tableBody.appendChild(tr);
       tr.appendChild(td1);
       tr.appendChild(td2);
       tr.appendChild(td3);
       tr.appendChild(td4);
+      tr.appendChild(td5);
       td4.innerHTML='false';
       if(parseDataAnswers&&parseDataAnswers.length){ //When the time will finish without answering any question
           console.log('not empty');
@@ -82,20 +88,22 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         td1.innerHTML = i+1;
         td2.innerHTML=question[i];
         td3.innerHTML=anwers[i]
-        td4.textContent ="true";
+        td4.innerHTML=parseCssArray[i].choises[parseDataAnswers[i]-1];
+        td5.innerHTML ="true";
         correctAnswers=correctAnswers+1;
         console.log(correctAnswers);
-        td4.style.color='green';
+        td5.style.color='green';
         
         }
         else{
         td1.innerHTML = i+1;
         td2.innerHTML=question[i];
-        td3.innerHTML=anwers[i]
-        td4.innerHTML ="false";
+        td3.innerHTML=anwers[i];
+        td4.innerHTML=parseCssArray[i].choises[parseDataAnswers[i]-1];
+        td5.innerHTML ="false";
         wrongAnswers=i+1;
         
-        td4.style.color='red';
+        td5.style.color='red';
 
     }
 

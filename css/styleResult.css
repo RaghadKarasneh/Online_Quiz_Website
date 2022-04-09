@@ -103,9 +103,11 @@ hr{
     transition: 1s ease-in-out;
 }
 #questionTh,
-#resultTd
+#resultTd,
+#userAnswerTh,
+#correctAnswerTh
 {
-    vertical-align: text-top;
+    vertical-align: inherit;
 }
 /************************* Footer ***********************/
 footer{
