@@ -10,7 +10,7 @@ function GetDataFromLovalStorage(){
     let parseData=JSON.parse(storageData);
     console.log(parseData[0]);
 
-   if (Xemail.value==parseData[0].email){
+   if (Xemail.value==parseData[0].femail){
 
    if (Xpassword.value==parseData[0].password){
         document.getElementById('submit').href='./welcome.html';

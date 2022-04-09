@@ -53,7 +53,7 @@ function userFirstName(fname){
     }
     else{
         nameError.style.display='block';
-        nameError.innerHTML='Incorrect name! Your name must contain leeters only.';
+        nameError.innerHTML='Incorrect name! Your name must contain letters only.';
         return false;
     }
 }
@@ -111,7 +111,7 @@ function checkPassword(password,spassword){
     else if((!capital.test(password[0])) && (!capital.test(spassword[0]))){ //To check from the first letter
         console.log( 'Incorrect! first name must be capital, password must contain 2 numbers at least, password must contain  at least 1 character');
         passwordError.style.display='block';
-        passwordError.innerHTML= 'Incorrect! first name must be capital.';
+        passwordError.innerHTML= 'Incorrect! first name must be capital, password must contain 2 numbers at least, password must contain  at least 1 character';
         return false;
     }
     else if((!num.test(password))&&(!num.test(spassword))){

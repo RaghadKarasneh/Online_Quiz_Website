@@ -61,7 +61,7 @@ function renderInformation(parseData,parseDataAnswers,userinfo,parseJsArray){
         `valueOf()`
     ]
     for (let i=0;i<correctQuizAnswers.length;i++){
-        console.log(parseCssArray[i].choises[parseDataAnswers[i]]);
+    
         /*To add a row and cells with the questions number and true ot false value depends on the user answers */
       let tr=document.createElement('tr');
       let td1=document.createElement('td');
