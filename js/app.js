@@ -83,7 +83,7 @@ if ((!regex.test(femail)) && (!regex.test(semail)))
     else{
         if (femail==semail){
              console.log('Email has been confirmed');
-             emailError.innerHTML='Email has been confirmed';
+             emailError.innerHTML='';
              return true;
         }
         else{
