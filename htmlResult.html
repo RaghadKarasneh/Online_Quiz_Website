@@ -12,7 +12,7 @@
 </head>
 <body>
     <!--Start Header which contains the navbar-->
-    <video src="./media/Firework.mp4" autoplay loop muted type="mp" id="video"></video>
+  
     <header>
         <!--*Start navbar*-->
         <nav class="navbar navbar-expand-lg bg-transparent">
@@ -55,18 +55,25 @@
     <!--Start Websit body which contains: Welcoming section, and Let's start the quiz button -->
 
     <main>
-        <div class="container">
-          
-            <article>
-              <h2 class="text-center" id="finalResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+      <div class="container">
+        <video src="./media/Firework.mp4" autoplay loop muted type="mp" id="video"></video>
+          <article>
+            <h2 class="text-center" id="finalResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
 
-                <div class="result text-center row">
-                      
-                        <!--**Start Result text-->
-                        <div class="col-lg-6 col-sm-12 col-md-12 result-text " >
-                            <p id="result-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam sequi ipsa, tenetur atque explicabo odio sint aspernatur, architecto iusto quaerat beatae consequuntur voluptate distinctio dolor totam cum fugiat magni quas?</p>
-                            <button class="btn col-lg-6" type="button" onclick="showtable()">Show Answers</button>
-                        </div>
+              <div class="result text-center row">
+                    
+                      <!--**Start Result text-->
+                      <div class="col-lg-5 result-text " >
+                          <p id="result-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam sequi ipsa, tenetur atque explicabo odio sint aspernatur, architecto iusto quaerat beatae consequuntur voluptate distinctio dolor totam cum fugiat magni quas?</p>
+                          <button class="btn col-lg-6" type="button" onclick="showtable()">Show Answers</button>
+                      </div>
+                   
+           
+                
+                      <!--**Start Result table-->
+                      <div class="col-lg-6 result-table" id="htmltable" >
+                          <table class="table table-dark ">
+                              <thead>
                      
              
                   
@@ -75,8 +82,12 @@
                             <table class="table table-dark ">
                                 <thead>
                                  
-                                    <th scope="col">Quiz Number</th>
-                                    <th scope="col">Result</th>
+                                    
+                                  <th scope="col">Quiz Number</th>
+                                  <th scope="col" id="questionTh">The question</th>
+                                  <th scope="col">The correct answer</th>
+                                  <th scope="col" id="resultTd">Result</th>
+                              
                                   
                                 </thead>
                                 <tbody id="tablebody">

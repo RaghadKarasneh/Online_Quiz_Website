@@ -68,8 +68,13 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
       tr.appendChild(td2);
       tr.appendChild(td3);
       tr.appendChild(td4);
-      correctAnswers=0;
       td4.innerHTML='false';
+      if(parseDataAnswers&&parseDataAnswers.length){ //When the time will finish without answering any question
+          console.log('not empty');
+      }else{
+          console.log('empty');
+          parseDataAnswers=[0,0,0,0,0,0,0,0,0,0];
+      }
       /*To check if user's answers are correct or not and to some actions in  */
       if(parseDataAnswers[i]==correctQuizAnswers[i]){
         console.log(td1);
@@ -90,19 +95,18 @@ function renderInformation(parseData,parseDataAnswers,userinfo){
         td4.innerHTML ="false";
         wrongAnswers=i+1;
         
-        videoCongrats.style.display='none';
         td4.style.color='red';
 
     }
+
 }//Dear ${userinfo[0].fname}  ${userinfo[0].lname}
     if(correctAnswers>=5){
         finalResult.innerHTML='Congratulations, you did it!';
-        videoCongrats.style.display='block';
-        document.body.style.backgroundColor = "#29c429";
+        finalResult.style.color = "#29c429";
     }
     else{
-        finalResult.innerHTML=`Unfortunately you didn't pass, plaese try agian.`;
-        document.body.style.backgroundColor = "#f22929";
+        finalResult.innerHTML=`Unfortunately you didn't pass, please try agian.`;
+        finalResult.style.color = "#f22929";
         videoCongrats.style.display='none';
     }
     resultP.innerHTML= `Dear ${userinfo[0].fname}  ${userinfo[0].lname} your score is ${correctAnswers} of 10, the number of the correct answers are ${correctAnswers} and the number of the wrong answers are ${10-correctAnswers}.`;

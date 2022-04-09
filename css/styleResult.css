@@ -3,6 +3,7 @@
     padding: 0;
     color: white;
 }
+
 html {
     scroll-behavior: smooth;
   }
@@ -75,6 +76,7 @@ hr{
 }
 .result p{
     font-size: 18px;
+    color: black;
 }
 .result .result-text .btn{
     color: white;
@@ -85,7 +87,7 @@ hr{
 }
 
 #video{
-    display: none;
+    display: block;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -99,6 +101,11 @@ hr{
 }
 .table{
     transition: 1s ease-in-out;
+}
+#questionTh,
+#resultTd
+{
+    vertical-align: text-top;
 }
 /************************* Footer ***********************/
 footer{

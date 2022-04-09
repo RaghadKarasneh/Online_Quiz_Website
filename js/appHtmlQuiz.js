@@ -8,6 +8,7 @@ let questionNumber=document.getElementById('questionNumber');
 let currentQuestion=0;
 let quizContainer=document.getElementById("questionContainer");
 let nextButton=document.getElementById('nextButton');
+let enableNextButton=document.getElementById('btn-next');
 let correctAnswerCount=0;
 let choosedAnswer=0;
 let userQuizAnswers=[];
@@ -19,20 +20,20 @@ let htmlQuiz=[
     {
         questions:"1- What does HTML stands for?",
         choises:["Hypertext Markup Language. " ,"Hypertext Machine language. "," Hypertext and links markup language."],
-        correctAnswer:"Hypertext Markup Language.",
+        correctAnswer:"Hypertext Markup Language",
         questionQuizNumber:'1'
     
     
     },
     {
-        questions:" 2-Which of the following HTML Elements is used for making any text bold ?",
+        questions:" 2- Which of the following HTML Elements is used for making any text bold ?",
         choises:[`<  b >`,` < p >`,` < i >`],
         correctAnswer:"< b >",
         questionQuizNumber:'2'
     
     },
     {
-        questions:" 3-Which of the following attributes is used to add link to any element?",
+        questions:" 3- Which of the following attributes is used to add link to any element?",
         choises:["href","ref","link"],
         correctAnswer:"href",
         questionQuizNumber:'3'
@@ -51,31 +52,31 @@ let htmlQuiz=[
         questionQuizNumber:'5'
     },
     {
-        questions:"6-How is document type initialized in HTML5.?",
+        questions:"6- How is document type initialized in HTML5?",
         choises:["< /DOCTYPE >","< /DOCTYPE HTML >","< !DOCTYPE HTML > "],
         correctAnswer:"< !DOCTYPE HTML > ",
         questionQuizNumber:'6'
     },
     {
-        questions:"7-Which of the following HTML element is used for creating an unordered list?",
+        questions:"7- Which of the following HTML element is used for creating an unordered list?",
         choises:[" < ui >"," < i >"," < ul >"],
         correctAnswer:" < ul > ",
         questionQuizNumber:'7'
     },
     {
-        questions:"8-Which of the following characters indicate closing of a tag? ",
+        questions:"8- Which of the following characters indicate closing of a tag? ",
         choises:[". ","/ ","! "],
         correctAnswer:" / ",
         questionQuizNumber:'8'
     },
     {
-        questions:"9-Which of the following is the correct way of creating an hyperlink in HTML?",
+        questions:"9- Which of the following is the correct way of creating an hyperlink in HTML?",
         choises:[` < a link=“” Geeksforgeeks> </ a> `,` < a href= “”>Geeksforgeeks</ a> `,`  < a href=“ /a>`],
         correctAnswer:"  < a href= “”>Geeksforgeeks< /a> ",
         questionQuizNumber:'9'
     },
     {
-        questions:"10-How many heading tags are there in HTML5??",
+        questions:"10- How many heading tags are there in HTML5?",
         choises:[" 2"," 6"," 5"],
         correctAnswer:" 6 ",
         questionQuizNumber:'10'
@@ -87,24 +88,30 @@ intitalization();
 
 function intitalization(){
     quizBeginning(); /*We call this function to start from question 1 */
-    answersContainer.addEventListener('click',function(e){
-    let buttonClicked=e.target;
-    checkAnswer(buttonClicked.innerText); // to check the answers and modefied the correct answers counter 
-})    
+   // answersContainer.addEventListener('click',function(e){
+    // let buttonClicked=e.target;
+    // checkAnswer(buttonClicked.innerText); // to check the answers and modefied the correct answers counter 
 }
+//)    }
 
 /*To start the first quiz */
 function quizBeginning(){
-    questionText(htmlQuiz[0]);
+   
+    questionBody.innerHTML=htmlQuiz[0].questions;
+    answerOne.innerHTML=htmlQuiz[0].choises[0];
+    answerTwo.innerHTML=htmlQuiz[0].choises[1];
+    answerThree.innerHTML=htmlQuiz[0].choises[2];
+    questionNumber.innerHTML=htmlQuiz[0].questionQuizNumber;
+    enableNextButton.disabled=true
 }
 
 function checkAnswer(userAnswer){
-    if(userAnswer == htmlQuiz[currentQuestion].correctAnswer){ //To check the correct answer by comparing it with the answer in the jsQuiz array
+    if(userAnswer == htmlQuiz[currentQuestion].correctAnswer){ //To check the correct answer by comparing it with the answer in the htmlQuiz array
         correctAnswerCount=correctAnswerCount+1; // calculate the correct answers
         console.log('the counter is:', correctAnswerCount);
     }
     //getUserAnswers();
-    showNextQuestion(); /*we call this function to move for the next question */
+    ; /*we call this function to move for the next question */
     return correctAnswerCount;
 }
 
@@ -114,41 +121,49 @@ function showNextQuestion(){
         nextButton.href='../../htmlResult.html';
     }
     else{
-       currentQuestion++;
-       questionText(htmlQuiz[currentQuestion]);
-       //To bring the question and its answers
+        
+        enableButton();
+ 
     }
     LocalStorageFrom();
 }
 
-/*To bring the question and its answers*/
-function questionText(question){
-    questionBody.innerHTML=question.questions;
-    answerOne.innerHTML=question.choises[0];
-    answerTwo.innerHTML=question.choises[1];
-    answerThree.innerHTML=question.choises[2];
-    questionNumber.innerHTML=question.questionQuizNumber
-}
-
 /*To store the options number after clicking on options */
 
-answerOne.addEventListener('click',function(e){
-  
+input1.addEventListener('click',function(e) {
+   
     userQuizAnswers.push(1);
+   enableNextButton.disabled=false;
+
 });
 
-answerTwo.addEventListener('click',function(e){
+input2.addEventListener('click',function(e){
  
     userQuizAnswers.push(2);
+    enableNextButton.disabled=false
+    
  });
 
- answerThree.addEventListener('click',function(e){
-     ;
-  userQuizAnswers.push(3);
+ input3.addEventListener('click',function(e){
+ 
+    userQuizAnswers.push(3);
+    enableNextButton.disabled=false
 
  });
 
-
+function enableButton(){
+    currentQuestion++;
+    questionBody.innerHTML=htmlQuiz[currentQuestion].questions;
+    answerOne.innerHTML=htmlQuiz[currentQuestion].choises[0];
+    answerTwo.innerHTML=htmlQuiz[currentQuestion].choises[1];
+    answerThree.innerHTML=htmlQuiz[currentQuestion].choises[2];
+    questionNumber.innerHTML=htmlQuiz[currentQuestion].questionQuizNumber;
+    enableNextButton.disabled=true;
+    input1.checked = false;
+    input2.checked = false;
+    input3.checked = false;
+   }
+  
 /*Local storage */
 function LocalStorageFrom(){
     console.log(correctAnswerCount);
@@ -176,7 +191,7 @@ function startTimer(duration, view_date) {
 }
 
 window.onload = function () {
-   let minutesOfFive = 60 * 3,
+   let minutesOfFive =5,
         view_date = document.querySelector('#time');
     startTimer(minutesOfFive, view_date);
 };

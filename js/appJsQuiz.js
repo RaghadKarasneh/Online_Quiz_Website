@@ -127,23 +127,10 @@ function showNextQuestion(){
     else{
         
         enableButton();
-    //    currentQuestion++;
-    //    questionText(jsQuiz[currentQuestion]);
-    
-       //To bring the question and its answers
+ 
     }
     LocalStorageFrom();
 }
-
-/*To bring the question and its answers*/
-// function questionText(question){
-    
-//     questionBody.innerHTML=question.questions;
-//     answerOne.innerHTML=question.choises[0];
-//     answerTwo.innerHTML=question.choises[1];
-//     answerThree.innerHTML=question.choises[2];
-//     questionNumber.innerHTML=question.questionQuizNumber
-// }
 
 /*To store the options number after clicking on options */
 
@@ -151,7 +138,6 @@ input1.addEventListener('click',function(e) {
    
     userQuizAnswers.push(1);
    enableNextButton.disabled=false;
-   //this.checked = false;
 
 });
 
@@ -210,7 +196,7 @@ function startTimer(duration, view_date) {
 }
 
 window.onload = function () {
-   let minutesOfFive = 5,
+   let minutesOfFive = 60 * 3,
         view_date = document.querySelector('#time');
     startTimer(minutesOfFive, view_date);
 };
