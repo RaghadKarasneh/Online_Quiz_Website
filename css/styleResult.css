@@ -101,7 +101,7 @@ hr{
 }
 .table{
     transition: 1s ease-in-out;
-    background-color: #5e55a5;
+    /* background-color: #5e55a5; */
 }
 #questionTh,
 #resultTd,
@@ -116,9 +116,13 @@ hr{
 #nextButton{
     display: none;
 }
-
-
-
+th,
+td{
+    color: black;
+}
+#your-answer{
+    font-weight: bold;
+}
 @media (max-width:1200px) {
     .navbar .nav-link{
         color: white !important;

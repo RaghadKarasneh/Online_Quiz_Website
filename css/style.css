@@ -12,7 +12,12 @@ body{
   }
   
   
-  
+  .navbar .navbar-brand{
+    font-size: 80px;
+    color:  white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; 
+ }
   .regForm{background-color:white;
       width: 50%;
       border-radius:25px;
@@ -28,6 +33,7 @@ body{
   
   #signupform{
   padding-left:10%;
+  width: 70%;
   }
   
   input{
@@ -42,7 +48,7 @@ body{
   background-size: contain;
   background-position: 40%;
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 48%;
   border-radius: 10px;
   border-top-left-radius:0 ;
@@ -190,9 +196,18 @@ body{
      
     }
   }
-  @media (max-width:1024px){
+  @media (max-width:1280px){
     .dvimg{
-    top:40%;}
+    display: none;}
+    #signupform{
+      width: 100%;
+    }
+    #signupform button{
+      width: 45%;
+    }
+    .col-lg-8{
+      width: 100% !important;
+    }
   }
   @media (min-width:320px){
     input{

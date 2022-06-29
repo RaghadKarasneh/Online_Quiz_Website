@@ -61,7 +61,9 @@ hr{
 }
 .container p{
     margin-top: 50px;
+    font-size: 25px;
 }
+
 .welcome .btn{
     background-color: white;
     height: 60px;
@@ -71,14 +73,15 @@ hr{
 }
 .welcome .btn:hover{
     background-color: #5e55a5;
-    color: white;
+    color: white !important;
 }
 .welcome .btn a{
-    text-decoration: none;
     color: black;
+    text-decoration: none;
+    
 }
 .welcome .btn a:hover{
-    color: white;
+    color: white !important;
 }
 
 

@@ -70,6 +70,7 @@ for (let i=0;i<correctQuizAnswers.length;i++){
   let td3=document.createElement('td');
   let td4=document.createElement('td');
   let td5=document.createElement('td');
+  td5.style.fontWeight="bold";
   tableBody.appendChild(tr);
   tr.appendChild(td1);
   tr.appendChild(td2);

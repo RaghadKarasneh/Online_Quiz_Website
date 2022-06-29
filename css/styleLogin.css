@@ -34,14 +34,31 @@ h2{
     color: white;
     border-radius: 10px;
 }
-@media screen and (max-width:992px) {
+@media (max-width:1280px) {
     #loginForm{
-        width: 95%;
+        width: 70% !important;
     }
     .btn{
-        left: unset;
+        left: 25%;
+        
     }
     h2{
         font-size: 1.5rem;
 }
+    }
+    @media (max-width:992px){
+        .btn{
+            left: unset;
+        }
+    }
+@media (max-width:420px){
+        #loginForm{
+            width: 100% !important;
+            padding: 50px !important;
+        }
+        .inputDiv{
+            margin-bottom: 10px!important;
+            
+        }
+      
     }

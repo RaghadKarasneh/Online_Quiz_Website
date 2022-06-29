@@ -3,7 +3,8 @@
 let regFormx=document.getElementById('regs_form');
 let firstName=document.getElementById('fname');
 let lastName=document.getElementById('lname');
-let nameError=document.getElementById('error-name');
+let nameLastError=document.getElementById('error-last-name');
+let nameFirstError=document.getElementById('error-first-name');
 let emailError=document.getElementById('error-email');
 let passwordError=document.getElementById('error-password');
 let regSubmitButton=document.getElementById('reg-submit-link');
@@ -32,9 +33,11 @@ this.correctEmails=correctEmail(this.femail,this.semail);
 
 this.correctPassword=checkPassword(this.password,this.spassword);
 
-if(this.firstName,this.lastName,this.correctEmails,this.correctPassword){
+if(this.firstName && this.lastName && this.correctEmails && this.correctPassword){
 
 info.push(this);
+regSubmitButton.href='./login.html';
+
 }
 LocalStorageFrom()
 console.log(this.fullName);
@@ -44,7 +47,7 @@ console.log(this.fullName);
 
 /*To return the full name */
 function userFirstName(fname){
-    nameError.style.display='';
+    nameFirstError.style.display='';
     let x;
     let regex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
     if ((regex.test(fname))){
@@ -52,13 +55,13 @@ function userFirstName(fname){
         return true;
     }
     else{
-        nameError.style.display='block';
-        nameError.innerHTML='Incorrect name! Your name must contain letters only.';
+        nameFirstError.style.display='block';
+        nameFirstError.innerHTML='Incorrect name! Your first name must contain letters only.';
         return false;
     }
 }
 function userLastName(lname){
-    nameError.style.display='';
+    nameLastError.style.display='';
     let x;
     let regex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
     if ((regex.test(lname))){
@@ -66,8 +69,8 @@ function userLastName(lname){
         return true;
     }
     else{
-        nameError.style.display='block';
-        nameError.innerHTML='Incorrect name! Your name must contain leeters only.';
+        nameLastError.style.display='block';
+        nameLastError.innerHTML='Incorrect name! Your last name must contain letters only.';
         return false;
     }
 }
@@ -109,7 +112,7 @@ function checkPassword(password,spassword){
         
     }
     else if((!capital.test(password[0])) && (!capital.test(spassword[0]))){ //To check from the first letter
-        console.log( 'Incorrect! first name must be capital, password must contain 2 numbers at least, password must contain  at least 1 character');
+        console.log( 'Incorrect! first letter must be capital, password must contain 2 numbers at least, password must contain  at least 1 character');
         passwordError.style.display='block';
         passwordError.innerHTML= 'Incorrect! first name must be capital, password must contain 2 numbers at least, password must contain  at least 1 character';
         return false;
@@ -149,7 +152,7 @@ function handelSubmit(e){
     let spassword=e.target.spassword.value;
     let selectList=e.target.selectList.value;
     new regForm(fname,lname,femail,semail,password,spassword,selectList); //Calling the constructor
-    regSubmitButton.href='./login.html';
+    
 }
 handelSubmit();
 

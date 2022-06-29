@@ -81,12 +81,14 @@ html {
 }
 /* ***p(question)*** */
 #questions{
-    font-size: larger;
+    font-size: 25px;
     font-family: 'Lato', sans-serif;
     margin-bottom: 50px;
     /* font-weight: bold; */
 }
-
+input{
+    margin-left: 30px;
+}
 /* ***Timer countdown***** */
 .counter{
     font-size:xx-large;
@@ -125,6 +127,9 @@ span{
         position: relative;
         left: unset;
         display: block
+    }
+    input{
+        margin-left: 0 ;
     }
     #contact-us{
         border-right:unset;
